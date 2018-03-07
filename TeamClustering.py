@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 from pyspark.sql import SQLContext
 
 # ReadFile
-FEATURES_COL = ['Pts', 'Opp Pts', 'Pace', 'Off Eff', 'Def Eff']
-path = 'data/17_18_advanced.csv'
+FEATURES_COL = ['Pace', 'Reb Rate', 'Pts', 'Opp Pts']
+path = 'data/3years.csv'
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
@@ -37,7 +37,7 @@ plt.ioff()
 fig.show()
 plt.savefig('K_Selection.png')
 
-k = 4
+k = 11
 kmeans = KMeans().setK(k).setSeed(1).setFeaturesCol("features")
 model = kmeans.fit(df_kmeans)
 centers = model.clusterCenters()
@@ -53,11 +53,12 @@ print(rows[:3])
 df_pred = data.join(transformed, 'Team')
 pddf_pred = df_pred.toPandas().set_index('Team')
 
-threedee = plt.figure(figsize=(12,10)).gca(projection='3d')
-threedee.scatter(pddf_pred['Pts'], pddf_pred['Opp Pts'], pddf_pred['Pace'], c=pddf_pred.prediction)
+threedee = plt.figure(figsize=(12, 10)).gca(projection='3d')
+threedee.scatter(pddf_pred['Pts'], pddf_pred['Opp Pts'], pddf_pred['Reb Rate'], s=20,
+                 c=pddf_pred.prediction)
 threedee.set_xlabel('Pts')
 threedee.set_ylabel('Opp Pts')
-threedee.set_zlabel('Pace')
+threedee.set_zlabel('Reb Rate')
 plt.interactive(True)
 plt.ioff()
 plt.show()
