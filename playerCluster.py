@@ -11,8 +11,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pyspark.sql import SQLContext
 
+from pyspark.ml.feature import PCA
+from pyspark.ml.linalg import Vectors
+
 # ReadFile
-FEATURES_COL = ['fg3a', 'trb', 'ast', 'blk', 'tov']
+FEATURES_COL = ['fg3a', 'trb', 'ast', 'blk', 'tov', 'ast']
 path = 'data/allPlayers.csv'
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
@@ -21,9 +24,15 @@ data.printSchema()
 data = data.where((col('mp') > 1000) & ((col("yr") == 2015) | (col("yr") == 2016)))
 data = data.na.fill(0)
 
-vecAssembler = VectorAssembler(inputCols=FEATURES_COL, outputCol="features")
-df_kmeans = vecAssembler.transform(data).select('player', 'features')
-print("!!!!!!!")
+vecAssembler = VectorAssembler(inputCols=FEATURES_COL, outputCol="Features")
+df_kmeans = vecAssembler.transform(data).select('player', 'Features')
+
+pca = PCA(k=3, inputCol="Features", outputCol="features")
+model = pca.fit(df_kmeans)
+df_kmeans = model.transform(df_kmeans).select('player', "features")
+# result.show(truncate=False)
+
+
 print(type(df_kmeans))
 df_kmeans.show()
 
