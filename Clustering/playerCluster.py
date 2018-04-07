@@ -3,7 +3,7 @@ from pyspark.sql import SparkSession
 from pyspark.ml.feature import StandardScaler
 from pyspark.ml.linalg import Vectors
 from pyspark.sql.functions import col
-
+import pyspark.sql.functions as F
 import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
 from pyspark.ml.feature import VectorAssembler
@@ -16,22 +16,49 @@ from pyspark.ml.feature import PCA
 from pyspark.ml.linalg import Vectors
 import os
 
+from pyspark.sql.functions import stddev, mean, min, max, col
+
+# Configure the python
 os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
 # ReadFile
 # All the features
-FEATURES_COL = ['fg', 'fga', 'fg_pct', 'fg3', 'fg3a',
-                'fg3_pct', 'fg2a', 'fg2_pct', 'efg_pct', 'ft',
-                'fta', 'ft_pct', 'orb', 'drb', 'trb',
-                'ast', 'stl', 'blk', 'tov']
+FEATURES_COL = ['fg3a', 'fga',
+                'trb',
+                'ast', 'stl', 'blk', 'pts']
 path = 'data/allPlayers.csv'
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 
-data = data.where((col('mp') > 1200) & ((col("yr") == 2015) | (col("yr") == 2016)))
+data = data.where((col('mp')/col('g') > 20) & (
+        (col("yr") == 2015) | (col("yr") == 2016) | (col("yr") == 2014) | (col("yr") == 2013) | (
+        col("yr") == 2012)))
 data = data.na.fill(0)
 
-vecAssembler = VectorAssembler(inputCols=FEATURES_COL, outputCol="Features")
+'''
+Normalizations part
+'''
+newFEATURES_COL = []
+
+
+def normalize(data, name):
+    min_age, max_age = data.select(min(name), max(name)).first()
+    newCol = "normalized_" + name
+    newFEATURES_COL.append(newCol)
+    data = data.withColumn(newCol, ((col(name) * col('g') / col('mp') - min_age) / (
+            max_age - min_age)))
+    return data
+
+
+for c in FEATURES_COL:
+    data = normalize(data, c)
+
+data.select(newFEATURES_COL).show()
+'''
+Normalizations part
+'''
+
+vecAssembler = VectorAssembler(inputCols=newFEATURES_COL, outputCol="Features")
 df_kmeans = vecAssembler.transform(data)  # .select('player', 'Features')
 
 pca = PCA(k=3, inputCol="Features", outputCol="features")
@@ -42,8 +69,6 @@ for it in features.collect():
     print(it)
 print(type(features))
 # result.show(truncate=False)
-
-df_kmeans.show()
 
 cost = np.zeros(20)
 for k in range(2, 20):
@@ -60,7 +85,7 @@ plt.ioff()
 fig.show()
 plt.savefig('K_Selection.png')
 
-k = 5
+k = 8
 kmeans = KMeans().setK(k).setSeed(1).setFeaturesCol("features")
 model = kmeans.fit(df_kmeans)
 centers = model.clusterCenters()
