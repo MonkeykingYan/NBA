@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9dbbd4-f71e-4d78-b700-132564052b40" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/NBA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NBA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/playerCluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/playerCluster.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/K_Selection.png" beforeDir="false" afterPath="$PROJECT_DIR$/K_Selection.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kmeans.png" beforeDir="false" afterPath="$PROJECT_DIR$/kmeans.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +24,7 @@
       <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PageRank/network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
+            <state relative-caret-position="660">
               <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -33,8 +36,8 @@
       <file leaf-file-name="playerCluster.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="175">
+              <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
               </folding>
@@ -42,10 +45,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="dataframe.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/pyspark/sql/dataframe.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="1847" selection-start-line="1847" selection-end-line="1847" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rdd.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/pyspark/rdd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="844" selection-start-line="844" selection-end-line="844" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TeamClustering.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Clustering/TeamClustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
+            <state relative-caret-position="390">
               <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
             </state>
           </provider>
@@ -75,10 +96,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="22" />
-    <option name="width" value="960" />
-    <option name="height" value="1058" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="24" />
+    <option name="width" value="1280" />
+    <option name="height" value="723" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -370,13 +391,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1058" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="24" width="1280" height="723" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49453977" weight="0.27902022" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4084656" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35303515" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32910052" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32946146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -396,21 +416,21 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49453977" visible="true" weight="0.27902022" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35343915" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" weight="0.32960597" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32946146" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32910052" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39940828" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32910052" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5054602" side_tool="true" weight="0.12779553" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32946146" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -422,6 +442,33 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PageRank/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/TeamClustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PageRank/network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1012">
@@ -497,20 +544,8 @@
     <entry file="file://$PROJECT_DIR$/data/17_18_advanced.csv" />
     <entry file="file://$PROJECT_DIR$/Clustering/TeamClustering.py" />
     <entry file="file://$PROJECT_DIR$/data/allPlayers.csv" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/py4j/java_gateway.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="1159" selection-start-line="1159" selection-end-line="1159" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyspark/sql/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/py4j/java_gateway.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyspark/sql/utils.py" />
     <entry file="file://$PROJECT_DIR$/data/3years.csv" />
     <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py" />
     <entry file="file://$PROJECT_DIR$/Clustering/data/allPlayers.csv" />
@@ -588,13 +623,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/py4j/java_gateway.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="1159" selection-start-line="1159" selection-end-line="1159" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/py4j/java_gateway.py" />
     <entry file="file://$PROJECT_DIR$/data/3years.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -604,7 +633,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PageRank/network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
+        <state relative-caret-position="660">
           <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -614,22 +643,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/TeamClustering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
+        <state relative-caret-position="390">
           <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyspark/sql/utils.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyspark/sql/utils.py" />
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/pyspark/rdd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="76">
+          <caret line="844" selection-start-line="844" selection-end-line="844" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/pyspark/sql/dataframe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="1847" selection-start-line="1847" selection-end-line="1847" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="175">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
