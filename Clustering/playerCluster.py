@@ -1,3 +1,4 @@
+from IPython.utils.syspathcontext import prepended_to_syspath
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import StandardScaler
 from pyspark.ml.linalg import Vectors
@@ -15,25 +16,31 @@ from pyspark.ml.feature import PCA
 from pyspark.ml.linalg import Vectors
 
 # ReadFile
-FEATURES_COL = ['fg3a', 'trb', 'ast', 'blk', 'tov', 'ast']
+# All the features
+FEATURES_COL = ['fg', 'fga', 'fg_pct', 'fg3', 'fg3a',
+                'fg3_pct', 'fg2a', 'fg2_pct', 'efg_pct', 'ft',
+                'fta', 'ft_pct', 'orb', 'drb', 'trb',
+                'ast', 'stl', 'blk', 'tov', 'ast']
 path = 'data/allPlayers.csv'
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 
-data = data.where((col('mp') > 1000) & ((col("yr") == 2015) | (col("yr") == 2016)))
+data = data.where((col('mp') > 1200) & ((col("yr") == 2015) | (col("yr") == 2016)))
 data = data.na.fill(0)
 
 vecAssembler = VectorAssembler(inputCols=FEATURES_COL, outputCol="Features")
-df_kmeans = vecAssembler.transform(data).select('player', 'Features')
+df_kmeans = vecAssembler.transform(data)#.select('player', 'Features')
 
 pca = PCA(k=3, inputCol="Features", outputCol="features")
 model = pca.fit(df_kmeans)
-df_kmeans = model.transform(df_kmeans).select('player', "features")
+df_kmeans = model.transform(df_kmeans)#select('player', "features")
+features = df_kmeans.select('features').rdd.map(lambda x: np.array(x))
+for it in features.collect():
+    print(it)
+print(type(features))
 # result.show(truncate=False)
 
-
-print(type(df_kmeans))
 df_kmeans.show()
 
 cost = np.zeros(20)
@@ -60,19 +67,27 @@ print("Cluster Centers: ")
 for center in centers:
     print(center)
 
-transformed = model.transform(df_kmeans).select('player', 'prediction')
+transformed = model.transform(df_kmeans).select('player', 'features','prediction')
 rows = transformed.collect()
 print(rows[:3])
+print(type(transformed))
+transformed.show()
 
 df_pred = data.join(transformed, 'player')
+df_pred.printSchema()
+#print(type(df_pred["features"].fieldIndex[]))
+arr = df_pred.select('features')
+print(arr[0][0])
+#df_pred = df_pred.withColumn("feature1", df_pred["features"][0]).withColumn("feature2", df_pred["features"].getItem(1)).withColumn("feature3", df_pred["features"].getItem(2))
+df_pred.show()
 pddf_pred = df_pred.toPandas().set_index('player')
 
 threedee = plt.figure(figsize=(12, 10)).gca(projection='3d')
-threedee.scatter(pddf_pred['fg3a'], pddf_pred['trb'], pddf_pred['ast'], s=20,
+threedee.scatter(pddf_pred['feature1'], pddf_pred['feature2'], pddf_pred['feature3'], s=20,
                  c=pddf_pred.prediction)
-threedee.set_xlabel('fg3a')
-threedee.set_ylabel('trb')
-threedee.set_zlabel('ast')
+threedee.set_xlabel('f1')
+threedee.set_ylabel('f2')
+threedee.set_zlabel('f3')
 plt.interactive(True)
 plt.ioff()
 plt.show()
