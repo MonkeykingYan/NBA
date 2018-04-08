@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9dbbd4-f71e-4d78-b700-132564052b40" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Clustering/Normalize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/NBA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NBA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/TeamClustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/TeamClustering.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/playerCluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/playerCluster.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/K_Selection.png" beforeDir="false" afterPath="$PROJECT_DIR$/K_Selection.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kmeans.png" beforeDir="false" afterPath="$PROJECT_DIR$/kmeans.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +22,7 @@
       <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PageRank/network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-819">
+            <state relative-caret-position="90">
               <caret line="10" column="9" selection-start-line="10" selection-end-line="11" />
             </state>
           </provider>
@@ -34,8 +31,8 @@
       <file leaf-file-name="playerCluster.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+            <state relative-caret-position="1080">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
               </folding>
@@ -43,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyspark/sql/utils.py">
+      <file leaf-file-name="TeamClustering.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Clustering/TeamClustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="840">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -80,11 +77,12 @@
         <option value="$PROJECT_DIR$/playerCluster.py" />
         <option value="$PROJECT_DIR$/network.py" />
         <option value="$PROJECT_DIR$/Clustering/Normalize.py" />
+        <option value="$PROJECT_DIR$/Clustering/TeamClustering.py" />
         <option value="$PROJECT_DIR$/Clustering/playerCluster.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="1058" />
@@ -95,6 +93,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,11 +115,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -379,20 +378,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1058" extended-state="0" />
+    <frame x="-1" y="22" width="1920" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49453977" visible="true" weight="0.12374934" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49628055" visible="true" weight="0.122696154" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5018431" side_tool="true" visible="true" weight="0.32910052" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38306877" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49815693" weight="0.0042328043" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32910052" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32946146" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32910052" />
+      <window_info id="Structure" order="1" sideWeight="0.50371945" side_tool="true" weight="0.122696154" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32910052" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39940828" />
-      <window_info id="Favorites" order="2" sideWeight="0.5054602" side_tool="true" weight="0.12779553" />
+      <window_info id="Favorites" order="2" sideWeight="0.50371945" side_tool="true" weight="0.122696154" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -412,8 +411,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35343915" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32946146" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39940828" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -431,6 +430,16 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -576,27 +585,8 @@
     </entry>
     <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/pyspark/rdd.py" />
     <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/pyspark/sql/dataframe.py" />
-    <entry file="file://$PROJECT_DIR$/Clustering/TeamClustering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyspark/ml/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/py4j/protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="319" selection-start-line="319" selection-end-line="319" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyspark/ml/base.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/py4j/protocol.py" />
     <entry file="file://$PROJECT_DIR$/Clustering/Normalize.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -604,27 +594,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/K_Selection.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/PageRank/network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-819">
+        <state relative-caret-position="90">
           <caret line="10" column="9" selection-start-line="10" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyspark/sql/utils.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyspark/sql/utils.py" />
+    <entry file="file://$PROJECT_DIR$/Clustering/TeamClustering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="840">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        <state relative-caret-position="1080">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>

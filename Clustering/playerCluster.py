@@ -30,11 +30,9 @@ spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 
-data = data.where((col('mp')/col('g') > 20) & (
-        (col("yr") == 2015) | (col("yr") == 2016) | (col("yr") == 2014) | (col("yr") == 2013) | (
-        col("yr") == 2012)))
+data = data.where((col('mp') / col('g') > 20) & (
+        (col("yr") == 2016)))
 data = data.na.fill(0)
-
 '''
 Normalizations part
 '''
@@ -45,7 +43,7 @@ def normalize(data, name):
     min_age, max_age = data.select(min(name), max(name)).first()
     newCol = "normalized_" + name
     newFEATURES_COL.append(newCol)
-    data = data.withColumn(newCol, ((col(name) * col('g') / col('mp') - min_age) / (
+    data = data.withColumn(newCol, ((col(name) / col('mp') - min_age) / (
             max_age - min_age)))
     return data
 
@@ -85,7 +83,7 @@ plt.ioff()
 fig.show()
 plt.savefig('K_Selection.png')
 
-k = 8
+k = 5
 kmeans = KMeans().setK(k).setSeed(1).setFeaturesCol("features")
 model = kmeans.fit(df_kmeans)
 centers = model.clusterCenters()

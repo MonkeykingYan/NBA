@@ -37,7 +37,7 @@ plt.ioff()
 fig.show()
 plt.savefig('K_Selection.png')
 
-k = 11
+k = 5
 kmeans = KMeans().setK(k).setSeed(1).setFeaturesCol("features")
 model = kmeans.fit(df_kmeans)
 centers = model.clusterCenters()
