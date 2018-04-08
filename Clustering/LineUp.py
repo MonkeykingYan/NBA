@@ -2,10 +2,10 @@ import pandas as pd
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 from pyspark.sql.functions import udf
+import playerClustering.py
 
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 df = pd.read_csv('../data/cavs.csv')
-
 mySchema = StructType([StructField("RK", IntegerType(), True) \
                           , StructField("Lineup", StringType(), True) \
                           , StructField("MP", StringType(), True) \
