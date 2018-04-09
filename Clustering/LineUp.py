@@ -2,41 +2,13 @@ import pandas as pd
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 from pyspark.sql.functions import col
+import math
 
 # Configure the python
 # os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 df = pd.read_csv('/Users/mayan/Desktop/BigData/project/Project_BigData/data/lineups_1516.csv')
 df_players = pd.read_csv('playersClusters.csv')
-
-# mySchema = StructType([StructField("RK", IntegerType(), True) \
-#                           , StructField("Lineup", StringType(), True) \
-#                           , StructField("TM", StringType(), True) \
-#                           , StructField("Season", StringType(), True) \
-#                           , StructField("G", StringType(), True) \
-#                           , StructField("MP", StringType(), True) \
-#                           , StructField("PTS", DoubleType(), True) \
-#                           , StructField("PG", DoubleType(), True) \
-#                           , StructField("PGA", DoubleType(), True) \
-#                           , StructField("PG%", DoubleType(), True) \
-#                           , StructField("3P", DoubleType(), True) \
-#                           , StructField("3PA", DoubleType(), True) \
-#                           , StructField("3P%", DoubleType(), True) \
-#                           , StructField("eFG%", DoubleType(), True) \
-#                           , StructField("FT", DoubleType(), True) \
-#                           , StructField("FTA", DoubleType(), True) \
-#                           , StructField("FT%", DoubleType(), True) \
-#                           , StructField("ORB", DoubleType(), True) \
-#                           , StructField("ORB%", DoubleType(), True) \
-#                           , StructField("DRB", DoubleType(), True) \
-#                           , StructField("DRB%", DoubleType(), True) \
-#                           , StructField("TRB", DoubleType(), True) \
-#                           , StructField("TRB%", DoubleType(), True) \
-#                           , StructField("AST", DoubleType(), True) \
-#                           , StructField("STL", DoubleType(), True) \
-#                           , StructField("BLK", DoubleType(), True) \
-#                           , StructField("TOV", DoubleType(), True) \
-#                           , StructField("PF", DoubleType(), True)])
 
 # df_p = spark.createDataFrame(df_players, schema=playersSchema)
 df_p = spark.createDataFrame(df_players)
@@ -49,25 +21,29 @@ df_lineup.show()
 
 def getPlayers(df, teamName, k):
     players = {}
+    weight = []
     i = 0
-    for it in df.select('Lineup','MP').where(col('Tm') == teamName).collect():
+    for it in df.select('Lineup', 'MP').where(col('Tm') == teamName).collect():
         print(it[0])
         print(it[1])
+        weight.append(it[1])
         it = it[0].split('|')
         players[i] = it
         if (i == k):
             break
         i += 1
-    return players
+    return (players, weight)
 
 
 # res = getPlayers(df, 'GSW', 3)
 # print(res)
 
 def getTeamFeaturs(teamName, rank):
-    feature = []
-    res = getPlayers(df_lineup, teamName, rank)
+    matrix = []
+    (res, weight) = getPlayers(df_lineup, teamName, rank)
+    print(res)
     for i in res.keys():
+        feature = []
         players = res[i]
         for p in players:
             p = p.strip()
@@ -78,7 +54,19 @@ def getTeamFeaturs(teamName, rank):
             feac = f.select('prediction').collect()
             if (len(feac) != 0):
                 feature.append(feac[0][0])
-    return feature
+        matrix = constructFeatureMatrix(feature, math.ceil(weight[i] * 10 / sum(weight)), matrix)
+    if (len(matrix) > 10):
+        matrix = matrix[:10]
+    else:
+        while (len(matrix) < 10):
+            matrix.append(matrix[0])
+    return matrix
+
+
+def constructFeatureMatrix(lineup, weight, matrix):
+    for w in range(1, weight):
+        matrix.append(lineup)
+    return matrix
 
 
 AllTeams = ['OKC', 'GSW', 'SAS', 'CLE', 'LAC',
