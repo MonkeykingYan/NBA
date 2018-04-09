@@ -30,7 +30,7 @@ spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 
-data = data.where((col('mp') / col('g') > 20) & (
+data = data.where((col('mp') / col('g') > 15) & (
     (col("yr") == 2016)))
 data = data.na.fill(0)
 '''
@@ -111,7 +111,7 @@ for it in arr:
     feature3.append(it[0][2])
 # df_pred = df_pred.withColumn("feature1", df_pred["features"][0]).withColumn("feature2", df_pred["features"].getItem(1)).withColumn("feature3", df_pred["features"].getItem(2))
 # df_pred.show()
-ans = df_pred.select('player', 'team_id', 'yr', 'prediction').sort('prediction')
+ans = df_pred.select('player', 'team_id', 'yr', 'prediction').sort('prediction').distinct()
 ans.show(ans.count(), False)
 pddf_pred = df_pred.toPandas().set_index('player')
 
