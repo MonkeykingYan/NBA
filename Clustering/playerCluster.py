@@ -126,4 +126,5 @@ plt.ioff()
 plt.show()
 plt.savefig('KMeans.png')
 ans = ans.toPandas().set_index('player')
-ans.to_csv('Clustering/playersClusters.csv', sep=' ')
+ans.to_csv('Clustering/playersClusters.csv', sep=','
+           )
