@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9dbbd4-f71e-4d78-b700-132564052b40" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Clustering/cavs.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/lineups_1516.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/teamsLineup.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/LineUp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/LineUp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/playerCluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/playerCluster.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/playersClusters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/playersClusters.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K_Selection.png" beforeDir="false" afterPath="$PROJECT_DIR$/K_Selection.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kmeans.png" beforeDir="false" afterPath="$PROJECT_DIR$/kmeans.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +19,8 @@
       <file leaf-file-name="LineUp.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1107">
-              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="131">
+              <caret line="110" column="42" lean-forward="true" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -39,7 +31,7 @@
       <file leaf-file-name="playersClusters.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="-2554">
               <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
             </state>
           </provider>
@@ -72,6 +64,7 @@
       <find>Mozgov</find>
       <find>Green</find>
       <find>arnes</find>
+      <find>den</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -424,7 +417,7 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49521786" visible="true" weight="0.14007372" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5013165" side_tool="true" weight="0.32910052" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49710375" visible="true" weight="0.32910052" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49710375" visible="true" weight="0.37566137" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32910052" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.4997367" weight="0.32910052" />
       <window_info id="Structure" order="1" sideWeight="0.50478214" side_tool="true" weight="0.122696154" />
@@ -622,22 +615,22 @@
     <entry file="file://$PROJECT_DIR$/data/teamsLineup.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/lineups_1516.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1493" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2554">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1107">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="131">
+          <caret line="110" column="42" lean-forward="true" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from pyspark.sql.functions import col
 
 # Configure the python
-#os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
+# os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 df = pd.read_csv('/Users/mayan/Desktop/BigData/project/Project_BigData/data/lineups_1516.csv')
 df_players = pd.read_csv('playersClusters.csv')
@@ -79,26 +79,48 @@ df = spark.createDataFrame(df)
 df.show()
 
 
-def getPlayers(df, teamName):
+def getPlayers(df, teamName, k):
     players = {}
-    for it in df.select('Lineup').where(col('Tm')== teamName).collect():
+    i = 0
+    for it in df.select('Lineup').where(col('Tm') == teamName).collect():
         it = it[0].split('|')
-        players[teamName] = it
+        players[i] = it
+        if (i == k):
+            break
+        i += 1
     return players
 
 
-res = getPlayers(df, 'GSW')
-print(res)
-feature = []
-for i in res.keys():
-    players = res[i]
-    for p in players:
-        p = p.strip()
-        print(p[0])
-        f = df_p.filter(df_p.player.like('%'+p[4:len(p)-1] + '%')).filter(df_p.player.like('%' + p[0] + '%')).distinct()
-        feac = f.select('prediction').collect()
-        print(feac)
-        if (len(feac) != 0):
-            feature.append(feac[0][0])
+# res = getPlayers(df, 'GSW', 3)
+# print(res)
 
-print(feature)
+def getTeamFeaturs(teamName, rank):
+    feature = []
+    res = getPlayers(df, teamName, rank)
+    for i in res.keys():
+        players = res[i]
+        for p in players:
+            p = p.strip()
+            f = df_p.filter(df_p.player.like('%' + p[4:len(p) - 1] + '%')).filter(
+                df_p.player.like('%' + p[0] + '%')).distinct()
+            feac = f.select('prediction').collect()
+            if (len(feac) != 0):
+                feature.append(feac[0][0])
+    return feature
+
+
+AllTeams = ['OKC', 'GSW', 'SAS', 'CLE', 'LAC',
+            'TOR', 'CHO', 'DET', 'POR', 'ATL',
+            'DAL', 'BOS', 'HOU', 'IND', 'UTA',
+            'WAS', 'MEM', 'MIA', 'PHI', 'NYK',
+            'NOP', 'LAL', 'BRK', 'ORL', 'SAC',
+            'MIL', 'PHO', 'CHI', 'MIN', 'DEN']
+
+ans = {}
+for team in AllTeams:
+    # print(team)
+    ans[team] = getTeamFeaturs(team, 2)
+
+for p in ans:
+    print(p)
+    print(ans[p])
