@@ -3,6 +3,9 @@ from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 from pyspark.sql.functions import col
 import math
+import numpy as np
+from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
 
 # Configure the python
 # os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
@@ -81,6 +84,10 @@ for team in AllTeams:
     # print(team)
     ans[team] = getTeamFeaturs(team, 2)
 
-for p in ans:
-    print(p)
-    print(ans[p])
+for a in ans:
+    print(a)
+    print(ans[a])
+
+data = np.array(ans[team])
+data = np.array(data)
+np.savetxt("foo.csv", data, delimiter=",")
