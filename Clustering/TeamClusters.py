@@ -6,12 +6,29 @@ import sklearn.cluster
 from nltk.metrics import distance
 import Pycluster as PC
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import col
+from pyspark.ml.fpm import FPGrowth
 
+# os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
 path = 'teamClusters.csv'
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 data.show()
+
+fpGrowth = FPGrowth(itemsCol="Features", minSupport=0.5, minConfidence=0.6)
+model = fpGrowth.fit(data)
+
+# Display frequent itemsets.
+model.freqItemsets.show()
+
+# Display generated association rules.
+model.associationRules.show()
+
+# transform examines the input items against all the association rules and summarize the
+# consequents as prediction
+model.transform(data).show()
+
 
 AllTeams = ['OKC', 'GSW', 'SAS', 'CLE', 'LAC',
             'TOR', 'CHO', 'DET', 'POR', 'ATL',
@@ -23,7 +40,8 @@ AllTeams = ['OKC', 'GSW', 'SAS', 'CLE', 'LAC',
 TeamDic = {}
 words = []
 for team in AllTeams:
-    lis = data.select(team).collect()
+    lis = data.where(col("Team") == team).select('Features').collect()
+    print(lis[0][0])
     TeamDic[team] = lis[0][0]
     words.append(lis[0][0])
 # print(TeamDic)
@@ -62,3 +80,26 @@ for key in cluster.keys():
 # pca.fit(data)
 # X = pca.transform(data)
 # print(X)
+
+def init_list_of_objects(size):
+    list_of_objects = list()
+    for i in range(0,size):
+        list_of_objects.append( list() ) #different object reference each time
+    return list_of_objects
+clusters = init_list_of_objects(int(3))
+
+# final_dis = []
+# for d in data.collect():  # all the data set
+#     for index_c in range(0, len(c)):  # all the center
+#         final_dis.append(distance(c[index_c][1], d[1]))# distance
+#     indx_min = final_dis.index(min(final_dis))
+#     final_dis = []
+#     clusters[indx_min].append(d[0])
+#
+# clusters = sorted(clusters, key=itemgetter(0))
+#
+# index = 0
+# for list in clusters:
+#     print("* Class {}".format(index))
+#     print(" ".join(sorted(list))+" ")
+#     index+=1

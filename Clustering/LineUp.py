@@ -92,11 +92,18 @@ for a in ans:
     TeamDic[a] = A
 
 print(TeamDic)
-s = pd.Series(TeamDic, name='features')
-s.index.name = 'Team'
-s.reset_index()
-print(type(s))
-print(s)
 
-df = pd.DataFrame([s])
-df.to_csv('teamClusters.csv')
+df = spark.createDataFrame([
+    (0, [1, 2, 5]),
+    (1, [1, 2, 3, 5]),
+    (2, [1, 2])
+], ["id", "items"])
+
+constructor = []
+for teamName in TeamDic.keys():
+    print(set(TeamDic[teamName]))
+    constructor.append((teamName, TeamDic[teamName]))
+
+df = spark.createDataFrame(constructor, ["Team", "Features"])
+df.show()
+df.toPandas().to_csv('teamClusters.csv')

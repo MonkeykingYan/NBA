@@ -30,7 +30,7 @@ spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 
-data = data.where((col('mp') / col('g') > 15) & (
+data = data.where((col('mp') / col('g') > 10) & (
         (col("yr") == 2016) | (col("yr") == 2015)))
 data = data.na.fill(0)
 '''
