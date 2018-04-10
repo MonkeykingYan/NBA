@@ -19,19 +19,22 @@ import os
 from pyspark.sql.functions import stddev, mean, min, max, col
 
 # Configure the python
-os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
+# os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
 # ReadFile
 # All the features
-FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb',
-                'trb',
-                'ast', 'stl', 'blk', 'tov', 'pts']
+# FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb',
+#                 'trb',
+#                 'ast', 'stl', 'blk', 'tov', 'pts']
+FEATURES_COL = ['fg3', 'fg3a', 'fta', 'trb',
+                'ast', 'blk', 'tov', 'pts']
 path = 'data/allPlayers.csv'
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 
 data = data.where((col('mp') / col('g') > 10) & (
-        (col("yr") == 2016) | (col("yr") == 2015)))
+        (col("yr") == 2016) | (col("yr") == 2015) | (col("yr") == 2014) | (col("yr") == 2013) | (col("yr") == 2012) | (
+        col("yr") == 2011) | (col("yr") == 2010)))
 data = data.na.fill(0)
 '''
 Normalizations part
@@ -50,7 +53,6 @@ def normalize(data, name):
 
 for c in FEATURES_COL:
     data = normalize(data, c)
-
 data.select(newFEATURES_COL).show()
 '''
 Normalizations part
@@ -83,7 +85,7 @@ plt.ioff()
 fig.show()
 plt.savefig('K_Selection.png')
 
-k = 10
+k = 15
 kmeans = KMeans().setK(k).setSeed(1).setFeaturesCol("features")
 model = kmeans.fit(df_kmeans)
 centers = model.clusterCenters()
@@ -111,7 +113,7 @@ for it in arr:
     feature3.append(it[0][2])
 # df_pred = df_pred.withColumn("feature1", df_pred["features"][0]).withColumn("feature2", df_pred["features"].getItem(1)).withColumn("feature3", df_pred["features"].getItem(2))
 # df_pred.show()
-ans = df_pred.select('player', 'team_id', 'yr', 'prediction').sort('prediction').distinct()
+ans = df_pred.select('player', 'team_id', 'yr', 'prediction').sort('player').distinct()
 ans.show(ans.count(), False)
 pddf_pred = df_pred.toPandas().set_index('player')
 

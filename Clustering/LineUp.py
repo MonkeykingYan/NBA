@@ -5,6 +5,7 @@ from pyspark.sql.functions import col
 import math
 import numpy as np
 from itertools import *
+from pyspark.sql.functions import lit
 import csv
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
@@ -12,7 +13,7 @@ import matplotlib.pyplot as plt
 # Configure the python
 # os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
-df = pd.read_csv('/Users/mayan/Desktop/BigData/project/Project_BigData/data/lineups_1516.csv')
+df = pd.read_csv('/Users/mayan/Desktop/BigData/project/Project_BigData/data/lineups_11To16.csv')
 df_players = pd.read_csv('playersClusters.csv')
 
 # df_p = spark.createDataFrame(df_players, schema=playersSchema)
@@ -24,11 +25,12 @@ df_lineup = spark.createDataFrame(df)
 df_lineup.show()
 
 
-def getPlayers(df, teamName, k):
+def getPlayers(df, teamName, k, year):
     players = {}
     weight = []
     i = 0
-    for it in df.select('Lineup', 'MP').where(col('Tm') == teamName).collect():
+    for it in df.select('Lineup', 'MP', 'Season').filter(df.Season.like(str(year) + '%')).collect():  # where(
+        # col('Tm') == teamName).collect():
         print(it[0])
         print(it[1])
         weight.append(it[1])
@@ -43,9 +45,9 @@ def getPlayers(df, teamName, k):
 # res = getPlayers(df, 'GSW', 3)
 # print(res)
 
-def getTeamFeaturs(teamName, rank):
+def getTeamFeaturs(teamName, rank, year):
     matrix = []
-    (res, weight) = getPlayers(df_lineup, teamName, rank)
+    (res, weight) = getPlayers(df_lineup, teamName, rank, year)
     print(res)
     for i in res.keys():
         feature = []
@@ -81,29 +83,51 @@ AllTeams = ['OKC', 'GSW', 'SAS', 'CLE', 'LAC',
             'NOP', 'LAL', 'BRK', 'ORL', 'SAC',
             'MIL', 'PHO', 'CHI', 'MIN', 'DEN']
 
-ans = {}
-for team in AllTeams:
-    # print(team)
-    ans[team] = getTeamFeaturs(team, 2)
+# def LineUp(k):
+#     AllYears = [2011,2012,2013,2014,2015,2016]
+#     AllTeams = ['OKC', 'GSW', 'SAS', 'CLE', 'LAC',
+#                 'TOR', 'CHO', 'DET', 'POR', 'ATL',
+#                 'DAL', 'BOS', 'HOU', 'IND', 'UTA',
+#                 'WAS', 'MEM', 'MIA', 'PHI', 'NYK',
+#                 'NOP', 'LAL', 'BRK', 'ORL', 'SAC',
+#                 'MIL', 'PHO', 'CHI', 'MIN', 'DEN']
+#     ans = {}
+#     season_team = {}
+#     res = []
+#     for team in AllTeams:
+#         for year in AllYears:
+#             ans[team] = getTeamFeaturs(team, k, year)
+#         season_team[year] = ans[team]
+#     res.append(season_team)
+#     return res
+# res = LineUp(2)
+# for i in res:
+#     print(i)
+AllYears = [2011, 2012, 2013, 2014, 2015, 2016]
+for years in AllYears:
+    ans = {}
+    for team in AllTeams:
+        # print(team)
+        ans[team] = getTeamFeaturs(team, 2, years)
 
-TeamDic = {}
-for a in ans:
-    A = list(chain.from_iterable(ans[a]))
-    TeamDic[a] = A
+    TeamDic = {}
+    for a in ans:
+        A = list(chain.from_iterable(ans[a]))
+        TeamDic[a] = A
 
-print(TeamDic)
+    print(TeamDic)
 
-df = spark.createDataFrame([
-    (0, [1, 2, 5]),
-    (1, [1, 2, 3, 5]),
-    (2, [1, 2])
-], ["id", "items"])
+    # df = spark.createDataFrame([
+    #     (0, [1, 2, 5]),
+    #     (1, [1, 2, 3, 5]),
+    #     (2, [1, 2])
+    # ], ["id", "items"])
 
-constructor = []
-for teamName in TeamDic.keys():
-    print(set(TeamDic[teamName]))
-    constructor.append((teamName, TeamDic[teamName]))
+    constructor = []
+    for teamName in TeamDic.keys():
+        print(set(TeamDic[teamName]))
+        constructor.append((teamName, TeamDic[teamName]))
 
-df = spark.createDataFrame(constructor, ["Team", "Features"])
-df.show()
-df.toPandas().to_csv('teamClusters.csv')
+    df = spark.createDataFrame(constructor, ["Team", "Features"]).withColumn('Season', lit(years))
+    df.show()
+    df.toPandas().to_csv('teamClusters{}.csv'.format(years))
