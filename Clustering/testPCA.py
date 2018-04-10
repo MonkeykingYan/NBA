@@ -26,7 +26,7 @@ for team in AllTeams:
     lis = data.select(team).collect()
     TeamDic[team] = lis[0][0]
     words.append(lis[0][0])
-print(TeamDic)
+# print(TeamDic)
 
 # words = ['apple', 'Doppler', 'applaud', 'append', 'barker',
 #          'baker', 'bismark', 'park', 'stake', 'steak', 'teak', 'sleek']
@@ -42,16 +42,23 @@ for word, label in zip(words, labels):
 for label, grp in cluster.items():
     print(grp)
 
-data = [[1,2,3],[4,5,6],[7,8,9],[10,11,12]]
-data = np.array(data)
-np.savetxt("foo.csv", data, delimiter=",")
-
-
-schema = StructType([StructField('Name', StringType(), True),
-                     StructField('DateTime', TimestampType(), True),
-                     StructField('Age', IntegerType(), True)])
-print(data)
-pca = PCA(n_components=3)
-pca.fit(data)
-X = pca.transform(data)
-print(X)
+print(cluster.keys())
+for key in cluster.keys():
+    feature = cluster[key]
+    print(feature)
+    for f in feature:
+        team = [k for k, v in TeamDic.items() if v == f]
+        print(team)
+# data = [[1,2,3],[4,5,6],[7,8,9],[10,11,12]]
+# data = np.array(data)
+# np.savetxt("foo.csv", data, delimiter=",")
+#
+#
+# schema = StructType([StructField('Name', StringType(), True),
+#                      StructField('DateTime', TimestampType(), True),
+#                      StructField('Age', IntegerType(), True)])
+# print(data)
+# pca = PCA(n_components=3)
+# pca.fit(data)
+# X = pca.transform(data)
+# print(X)

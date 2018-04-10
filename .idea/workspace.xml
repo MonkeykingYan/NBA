@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9dbbd4-f71e-4d78-b700-132564052b40" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/teamClusters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/testPCA.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/testPCA.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +31,11 @@
       <file leaf-file-name="testPCA.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Clustering/testPCA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+            <state relative-caret-position="215">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1523327855000" expanded="true" signature="1649:1650" ph="..." />
+                <marker date="1523328411000" expanded="true" signature="1799:1800" ph="..." />
               </folding>
             </state>
           </provider>
@@ -460,7 +458,7 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.14007372" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013165" side_tool="true" weight="0.32910052" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49710375" visible="true" weight="0.18730159" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49710375" visible="true" weight="0.54497355" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.4997367" weight="0.32910052" />
       <window_info id="Structure" order="1" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
@@ -663,11 +661,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/testPCA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        <state relative-caret-position="215">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1523327855000" expanded="true" signature="1649:1650" ph="..." />
+            <marker date="1523328411000" expanded="true" signature="1799:1800" ph="..." />
           </folding>
         </state>
       </provider>
