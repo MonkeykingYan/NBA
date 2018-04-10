@@ -31,7 +31,7 @@ data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 
 data = data.where((col('mp') / col('g') > 15) & (
-    (col("yr") == 2016)|(col("yr") == 2015)))
+        (col("yr") == 2016) | (col("yr") == 2015)))
 data = data.na.fill(0)
 '''
 Normalizations part
@@ -126,5 +126,4 @@ plt.ioff()
 plt.show()
 plt.savefig('KMeans.png')
 ans = ans.toPandas().set_index('player')
-ans.to_csv('Clustering/playersClusters.csv', sep=','
-           )
+ans.to_csv('Clustering/playersClusters.csv', sep=',')

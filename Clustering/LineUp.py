@@ -4,6 +4,8 @@ from pyspark.sql.types import *
 from pyspark.sql.functions import col
 import math
 import numpy as np
+from itertools import *
+import csv
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
@@ -84,10 +86,17 @@ for team in AllTeams:
     # print(team)
     ans[team] = getTeamFeaturs(team, 2)
 
+TeamDic = {}
 for a in ans:
-    print(a)
-    print(ans[a])
+    A = list(chain.from_iterable(ans[a]))
+    TeamDic[a] = A
 
-data = np.array(ans[team])
-data = np.array(data)
-np.savetxt("foo.csv", data, delimiter=",")
+print(TeamDic)
+s = pd.Series(TeamDic, name='features')
+s.index.name = 'Team'
+s.reset_index()
+print(type(s))
+print(s)
+
+df = pd.DataFrame([s])
+df.to_csv('teamClusters.csv')
