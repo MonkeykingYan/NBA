@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9dbbd4-f71e-4d78-b700-132564052b40" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Clustering/FrequentItemSets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NBA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NBA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/LineUp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/LineUp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/Constructor_Team.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/Constructor_Team.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/TeamClusters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/TeamClusters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/playerCluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/playerCluster.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/playersClusters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/playersClusters.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2011.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2011.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2012.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2012.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2013.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2013.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2014.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2014.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2015.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2015.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2016.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2016.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K_Selection.png" beforeDir="false" afterPath="$PROJECT_DIR$/K_Selection.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yan_Ma.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Yan_Ma.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$Yan_Ma.pptx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LineUp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LineUp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+            <state relative-caret-position="697">
+              <caret line="24" column="16" selection-start-line="9" selection-start-column="34" selection-end-line="10" selection-end-column="6" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -36,11 +44,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teamClusters2016.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Clustering/teamClusters2016.csv">
+      <file leaf-file-name="FrequentItemSets.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Clustering/FrequentItemSets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+            <state relative-caret-position="204">
+              <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,7 +81,9 @@
       <find>JR</find>
       <find>lebron</find>
       <find>Smith</find>
+      <find>lebr</find>
       <find>Lebron</find>
+      <find>FPG</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -89,14 +102,16 @@
         <option value="$PROJECT_DIR$/Clustering/testPCA.py" />
         <option value="$PROJECT_DIR$/Clustering/data/Constructor_Team.py" />
         <option value="$PROJECT_DIR$/Clustering/teamClusters.csv" />
+        <option value="$PROJECT_DIR$/Clustering/LineUp.py" />
         <option value="$PROJECT_DIR$/Clustering/Constructor_Team.py" />
         <option value="$PROJECT_DIR$/Clustering/playerCluster.py" />
         <option value="$PROJECT_DIR$/Clustering/TeamClusters.py" />
-        <option value="$PROJECT_DIR$/Clustering/LineUp.py" />
+        <option value="$PROJECT_DIR$/Clustering/FrequentItemSets.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-4" />
     <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="1058" />
@@ -107,7 +122,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,6 +153,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,7 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.LineUp">
+  <component name="RunManager" selected="Python.FrequentItemSets">
     <configuration name="Constructor_Team" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NBA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,6 +197,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Clustering/Constructor_Team.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="FrequentItemSets" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="NBA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clustering" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Clustering/FrequentItemSets.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -241,25 +274,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="network" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="NBA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="PYSPARK_SUBMIT_ARGS" value="--packages graphframes:graphframes:0.3.0-spark2.0-s_2.11 pyspark-shell" />
-      </envs>
-      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PageRank/network.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="playerCluster" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NBA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -285,9 +299,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clustering" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Clustering/TeamClusters.py" />
@@ -405,17 +419,17 @@
       <item itemvalue="Python.LineUp" />
       <item itemvalue="Python.TeamClustering" />
       <item itemvalue="Python.playerCluster" />
-      <item itemvalue="Python.network" />
       <item itemvalue="Python.testPCA" />
       <item itemvalue="Python.Constructor_Team" />
+      <item itemvalue="Python.FrequentItemSets" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.playerCluster" />
+        <item itemvalue="Python.FrequentItemSets" />
         <item itemvalue="Python.testPCA" />
+        <item itemvalue="Python.playerCluster" />
         <item itemvalue="Python.Constructor_Team" />
         <item itemvalue="Python.TeamClustering" />
-        <item itemvalue="Python.network" />
       </list>
     </recent_temporary>
   </component>
@@ -442,36 +456,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1058" extended-state="0" />
+    <frame x="-4" y="22" width="1920" height="1058" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.2311743" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.19905214" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013165" side_tool="true" weight="0.32910052" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49710375" side_tool="true" visible="true" weight="0.50793654" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5002633" side_tool="true" visible="true" weight="0.51428574" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.4997367" weight="0.32910052" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49921012" weight="0.32910052" />
       <window_info id="Structure" order="1" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4986835" weight="0.32910052" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39894179" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49763033" weight="0.32804233" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997367" weight="0.39894179" />
       <window_info id="Favorites" order="2" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49710375" side_tool="true" visible="true" weight="0.22857143" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.2311743" />
-      <window_info id="Structure" order="1" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
       <window_info anchor="right" id="Data View" order="3" weight="0.32960597" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39894179" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013165" side_tool="true" weight="0.32910052" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962587" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4986835" weight="0.32910052" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.4997367" weight="0.32910052" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -479,26 +484,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/cavs.csv">
+    <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        <state relative-caret-position="190290">
+          <caret line="6343" column="26" selection-start-line="6343" selection-start-column="26" selection-end-line="6343" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/allPlayers.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="115" selection-start-line="18" selection-start-column="115" selection-end-line="18" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/testPCA.py" />
-    <entry file="file://$PROJECT_DIR$/Clustering/data/allPlayers.csv" />
     <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py" />
     <entry file="file://$PROJECT_DIR$/Shots/ShotsVisualization.py" />
     <entry file="file://$PROJECT_DIR$/PageRank/size.csv" />
@@ -613,49 +609,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/Constructor_Team.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/TeamClusters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2605">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1523407432000" expanded="true" signature="2862:2863" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/allPlayers.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="18" column="115" selection-start-line="18" selection-start-column="115" selection-end-line="18" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164523">
-          <caret line="8189" column="28" selection-start-line="8189" selection-start-column="28" selection-end-line="8189" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/teamClusters.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="21" column="60" lean-forward="true" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="124" column="25" lean-forward="true" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -669,22 +626,88 @@
         <state relative-caret-position="-445" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/teamClusters2011.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/teamClusters2016.csv">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="7" column="148" selection-start-line="7" selection-start-column="148" selection-end-line="7" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/teamClusters2011.csv">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/pyspark/rdd.py" />
+    <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/TeamClusters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="42" selection-end-line="42" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+        <state relative-caret-position="697">
+          <caret line="24" column="16" selection-start-line="9" selection-start-column="34" selection-end-line="10" selection-end-column="6" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95675">
+          <caret line="3757" column="24" selection-start-line="3757" selection-start-column="24" selection-end-line="3757" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/teamClusters.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/Constructor_Team.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/ClustersTeams.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/FrequentItemSets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
