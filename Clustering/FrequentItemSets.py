@@ -32,20 +32,20 @@ data = data.map(lambda x: (x[0], x[1], x[2], x[3], list(set(x[2])), x[5]))
 data = spark.createDataFrame(data, ["ID", "Team", "Features", 'Season', 'Items', 'label'])
 data.show()
 
-d0 = data.where(col("label") == 0).select("Team", 'Season','Items', 'label')
+d0 = data.where(col("label") == 1).select("Team", 'Season','Items', 'label')
 d0.show(d0.count(), False)
 
 fpGrowth = FPGrowth(itemsCol="Items", minSupport=0.5, minConfidence=0.5)
 model = fpGrowth.fit(d0)
 
 # Display frequent itemsets.
-model.freqItemsets.show(3)
+model.freqItemsets.show(8)
 
 # Display generated association rules.
-model.associationRules.show(3)
+model.associationRules.show(8)
 
 # transform examines the input items against all the association rules and summarize the
 # consequents as prediction
-model.transform(d0).show(3)
+model.transform(d0).show(8)
 
 
