@@ -29,8 +29,8 @@ def getPlayers(df, teamName, k, year):
     players = {}
     weight = []
     i = 0
-    for it in df.select('Lineup', 'MP', 'Season').filter(df.Season.like(str(year) + '%')).collect():  # where(
-        # col('Tm') == teamName).collect():
+    for it in df.select('Lineup', 'MP', 'Season').where(
+            col('Tm') == teamName).collect():
         print(it[0])
         print(it[1])
         weight.append(it[1])
@@ -104,11 +104,11 @@ AllTeams = ['OKC', 'GSW', 'SAS', 'CLE', 'LAC',
 # for i in res:
 #     print(i)
 AllYears = [2011, 2012, 2013, 2014, 2015, 2016]
-for years in AllYears:
+for year in AllYears:
     ans = {}
     for team in AllTeams:
         # print(team)
-        ans[team] = getTeamFeaturs(team, 2, years)
+        ans[team] = getTeamFeaturs(team, 2, year)
 
     TeamDic = {}
     for a in ans:
@@ -117,17 +117,11 @@ for years in AllYears:
 
     print(TeamDic)
 
-    # df = spark.createDataFrame([
-    #     (0, [1, 2, 5]),
-    #     (1, [1, 2, 3, 5]),
-    #     (2, [1, 2])
-    # ], ["id", "items"])
-
     constructor = []
     for teamName in TeamDic.keys():
         print(set(TeamDic[teamName]))
         constructor.append((teamName, TeamDic[teamName]))
 
-    df = spark.createDataFrame(constructor, ["Team", "Features"]).withColumn('Season', lit(years))
+    df = spark.createDataFrame(constructor, ["Team", "Features"]).withColumn('Season', lit(year))
     df.show()
-    df.toPandas().to_csv('teamClusters{}.csv'.format(years))
+    df.toPandas().to_csv('teamClusters{}.csv'.format(year))

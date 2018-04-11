@@ -10,7 +10,7 @@ from pyspark.sql.functions import col
 from pyspark.ml.fpm import FPGrowth
 
 # os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
-path = 'teamClusters.csv'
+path = 'teamClusters2011.csv'
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
