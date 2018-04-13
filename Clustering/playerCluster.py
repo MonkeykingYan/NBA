@@ -1,4 +1,4 @@
-
+# Import all the packages
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import StandardScaler
 from pyspark.ml.linalg import Vectors
@@ -18,23 +18,19 @@ import os
 
 from pyspark.sql.functions import stddev, mean, min, max, col
 
-# Configure the python
-# os.environ["PYSPARK_PYTHON"] = "/usr/local/bin/python3"
 # ReadFile
 # All the features
-# FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb',
-#                 'trb',
-#                 'ast', 'stl', 'blk', 'tov', 'pts', 'fg_pct', 'fg2_pct', 'fg3_pct', 'efg_pct']
-FEATURES_COL = ['fg3a', 'fta', 'trb',
-                'stl', 'blk']
+FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb',
+                'trb',
+                'ast', 'stl', 'blk', 'tov', 'pts', 'fg_pct', 'fg2_pct', 'fg3_pct', 'efg_pct']
 path = 'data/allPlayers.csv'
-spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
+spark = SparkSession.builder.appName('Player-Classifier').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 
 data = data.where((col('mp') / col('g') > 20) & (
         (col("yr") == 2016) | (col("yr") == 2015) | (col("yr") == 2014) | (col("yr") == 2013) | (col("yr") == 2012) | (
-        col("yr") == 2011) | (col("yr") == 2010))).filter(col('pos') == 'C')
+        col("yr") == 2011) | (col("yr") == 2010)))
 data = data.na.fill(0)
 '''
 Normalizations part
