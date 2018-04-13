@@ -32,12 +32,12 @@ data = data.where((col('mp') / col('g') > 20) & (
         (col("yr") == 2016) | (col("yr") == 2015) | (col("yr") == 2014) | (col("yr") == 2013) | (col("yr") == 2012) | (
         col("yr") == 2011) | (col("yr") == 2010)))
 data = data.na.fill(0)
+
+
 '''
 Normalizations part
 '''
 newFEATURES_COL = []
-
-
 def normalize(data, name):
     min_age, max_age = data.select(min(name), max(name)).first()
     newCol = "normalized_" + name
@@ -45,8 +45,6 @@ def normalize(data, name):
     data = data.withColumn(newCol, ((col(name) - min_age) / (
             max_age - min_age)))
     return data
-
-
 for c in FEATURES_COL:
     data = normalize(data, c)
 data.select(newFEATURES_COL).show()
@@ -61,10 +59,7 @@ pca = PCA(k=3, inputCol="Features", outputCol="features")
 model = pca.fit(df_kmeans)
 df_kmeans = model.transform(df_kmeans)  # select('player', "features")
 features = df_kmeans.select('features').rdd.map(lambda x: np.array(x))
-for it in features.collect():
-    print(it)
-print(type(features))
-# result.show(truncate=False)
+
 
 cost = np.zeros(20)
 for k in range(2, 20):

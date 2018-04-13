@@ -46,8 +46,8 @@
       <file leaf-file-name="playerCluster.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+            <state relative-caret-position="436">
+              <caret line="62" lean-forward="true" selection-start-line="61" selection-end-line="62" />
               <folding>
                 <element signature="e#63#99#0" expanded="true" />
               </folding>
@@ -715,8 +715,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+        <state relative-caret-position="436">
+          <caret line="62" lean-forward="true" selection-start-line="61" selection-end-line="62" />
           <folding>
             <element signature="e#63#99#0" expanded="true" />
           </folding>
