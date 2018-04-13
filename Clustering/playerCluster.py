@@ -1,4 +1,4 @@
-from IPython.utils.syspathcontext import prepended_to_syspath
+
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import StandardScaler
 from pyspark.ml.linalg import Vectors
@@ -24,17 +24,17 @@ from pyspark.sql.functions import stddev, mean, min, max, col
 # All the features
 # FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb',
 #                 'trb',
-#                 'ast', 'stl', 'blk', 'tov', 'pts']
-FEATURES_COL = ['fg3', 'fg3a', 'fta', 'trb',
-                'ast', 'blk', 'tov', 'pts']
+#                 'ast', 'stl', 'blk', 'tov', 'pts', 'fg_pct', 'fg2_pct', 'fg3_pct', 'efg_pct']
+FEATURES_COL = ['fg3a', 'fta', 'trb',
+                'stl', 'blk']
 path = 'data/allPlayers.csv'
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 
-data = data.where((col('mp') / col('g') > 15) & (
+data = data.where((col('mp') / col('g') > 20) & (
         (col("yr") == 2016) | (col("yr") == 2015) | (col("yr") == 2014) | (col("yr") == 2013) | (col("yr") == 2012) | (
-        col("yr") == 2011) | (col("yr") == 2010)))
+        col("yr") == 2011) | (col("yr") == 2010))).filter(col('pos') == 'C')
 data = data.na.fill(0)
 '''
 Normalizations part
@@ -46,7 +46,7 @@ def normalize(data, name):
     min_age, max_age = data.select(min(name), max(name)).first()
     newCol = "normalized_" + name
     newFEATURES_COL.append(newCol)
-    data = data.withColumn(newCol, ((col(name) / col('mp') - min_age) / (
+    data = data.withColumn(newCol, ((col(name) - min_age) / (
             max_age - min_age)))
     return data
 
@@ -85,7 +85,7 @@ plt.ioff()
 fig.show()
 plt.savefig('K_Selection.png')
 
-k = 8
+k = 10
 kmeans = KMeans().setK(k).setSeed(1).setFeaturesCol("features")
 model = kmeans.fit(df_kmeans)
 centers = model.clusterCenters()
@@ -113,7 +113,7 @@ for it in arr:
     feature3.append(it[0][2])
 # df_pred = df_pred.withColumn("feature1", df_pred["features"][0]).withColumn("feature2", df_pred["features"].getItem(1)).withColumn("feature3", df_pred["features"].getItem(2))
 # df_pred.show()
-ans = df_pred.select('player', 'team_id', 'yr', 'prediction').sort('prediction').distinct()
+ans = df_pred.select('player', 'team_id', 'yr', 'prediction').sort('player').distinct()
 ans.show(ans.count(), False)
 pddf_pred = df_pred.toPandas().set_index('player')
 
