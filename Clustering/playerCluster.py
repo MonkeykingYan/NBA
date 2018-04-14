@@ -61,10 +61,26 @@ Normalizations part
 
 vecAssembler = VectorAssembler(inputCols=newFEATURES_COL, outputCol="Features")
 df_kmeans = vecAssembler.transform(data)  # .select('player', 'Features')
+costPCA = np.zeros(10)
+for pcak in range(1, 10):
+    pca = PCA(k=pcak, inputCol="Features", outputCol="features")
+    model = pca.fit(df_kmeans)
+    costPCA[pcak] = sum(model.explainedVariance)
+
+
+plt.interactive(True)
+fig, ax = plt.subplots(1, 1, figsize=(8, 6))
+ax.plot(range(1, 10), costPCA[1:10])
+ax.set_xlabel('k')
+ax.set_ylabel('Explained Variance Ratio')
+plt.ioff()
+fig.show()
+plt.savefig('ExplainedRatio.png')
 
 pca = PCA(k=3, inputCol="Features", outputCol="features")
 model = pca.fit(df_kmeans)
-df_kmeans = model.transform(df_kmeans)  # select('player', "features")
+df_kmeans = model.transform(df_kmeans)# select('player', "features")
+print(model.explainedVariance)
 features = df_kmeans.select('features').rdd.map(lambda x: np.array(x))
 for it in features.collect():
     print(it)
