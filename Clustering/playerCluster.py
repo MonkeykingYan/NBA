@@ -20,12 +20,9 @@ from pyspark.sql.functions import stddev, mean, min, max, col
 
 # ReadFile
 # All the features
-FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb',
-                'trb',
+FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb', 'trb',
                 'ast', 'stl', 'blk', 'tov', 'pts', 'fg_pct', 'fg2_pct', 'fg3_pct', 'efg_pct']
-# FEATURES_COL = ['fg3', 'fg3a', 'fg3_pct',
-#                 'trb','orb', 'drb',
-#                 'ast', 'blk','fg2_pct']
+
 path = 'data/allPlayers.csv'
 spark = SparkSession.builder.appName('Player-Classifier').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
@@ -50,7 +47,7 @@ def normalize(data, name):
     min_age, max_age = data.select(min(newCol), max(newCol)).first()
     newCol2 = "normalized_" + newCol
     newFEATURES_COL.append(newCol2)
-    data = data.withColumn(newCol2, ((col(newCol) - min_age)/ (
+    data = data.withColumn(newCol2, ((col(newCol) - min_age) / (
             max_age - min_age)))
     return data
 
@@ -77,7 +74,7 @@ print(type(features))
 cost = np.zeros(20)
 for k in range(2, 20):
     kmeans = KMeans().setK(k).setSeed(1).setFeaturesCol("features")
-    model = kmeans.fit(df_kmeans.sample(False, 0.1, seed=42))
+    model = kmeans.fit(df_kmeans.sample(False, 0.1, seed=99))
     cost[k] = model.computeCost(df_kmeans)
 
 plt.interactive(True)
@@ -98,7 +95,7 @@ print("Cluster Centers: ")
 for center in centers:
     print(center)
 
-transformed = model.transform(df_kmeans).select('player', 'features','prediction', 'yr',  'team_id').sort('player')
+transformed = model.transform(df_kmeans).select('player', 'features', 'prediction', 'yr', 'team_id').sort('player')
 print("this is the transformaed")
 transformed.show(transformed.count(), False)
 # rows = transformed.collect()
