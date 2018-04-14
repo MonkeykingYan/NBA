@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9dbbd4-f71e-4d78-b700-132564052b40" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/playerCluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/playerCluster.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/playersClusters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/playersClusters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K_Selection.png" beforeDir="false" afterPath="$PROJECT_DIR$/K_Selection.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,61 +19,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LineUp.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="24" column="16" selection-start-line="9" selection-start-column="34" selection-end-line="10" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrequentItemSets.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Clustering/FrequentItemSets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="playersClusters.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8331">
-              <caret line="474" column="23" selection-start-line="474" selection-start-column="23" selection-end-line="474" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="playerCluster.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="62" lean-forward="true" selection-start-line="61" selection-end-line="62" />
+            <state relative-caret-position="3630">
+              <caret line="121" column="52" lean-forward="true" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="52" />
               <folding>
-                <element signature="e#63#99#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClusterExample.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Clustering/ClusterExample.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="48" column="69" lean-forward="true" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PageRank/network.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#26#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,8 +57,9 @@
       <find>lebron</find>
       <find>Smith</find>
       <find>lebr</find>
-      <find>Lebron</find>
       <find>FPG</find>
+      <find>Chris</find>
+      <find>Lebron</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -479,15 +435,15 @@
     <frame x="0" y="22" width="1920" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.19220643" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.15271196" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013165" side_tool="true" weight="0.32910052" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5007899" side_tool="true" visible="true" weight="0.22645503" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5013165" side_tool="true" weight="0.2984127" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49921012" weight="0.32910052" />
       <window_info id="Structure" order="1" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49763033" weight="0.32804233" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49921012" weight="0.39894179" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986835" weight="0.39894179" />
       <window_info id="Favorites" order="2" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -654,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="24" column="16" selection-start-line="9" selection-start-column="34" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/teamClusters.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -684,41 +633,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/FrequentItemSets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
+        <state relative-caret-position="930">
           <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8331">
-          <caret line="474" column="23" selection-start-line="474" selection-start-column="23" selection-end-line="474" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PageRank/network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
+        <state relative-caret-position="270">
           <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1560" column="22" selection-start-line="1560" selection-start-column="22" selection-end-line="1560" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/ClusterExample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
+        <state relative-caret-position="601">
           <caret line="48" column="69" lean-forward="true" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="62" lean-forward="true" selection-start-line="61" selection-end-line="62" />
+        <state relative-caret-position="3630">
+          <caret line="121" column="52" lean-forward="true" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="52" />
           <folding>
-            <element signature="e#63#99#0" expanded="true" />
+            <element signature="e#26#62#0" expanded="true" />
           </folding>
         </state>
       </provider>

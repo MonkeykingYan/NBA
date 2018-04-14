@@ -20,9 +20,12 @@ from pyspark.sql.functions import stddev, mean, min, max, col
 
 # ReadFile
 # All the features
-FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb',
-                'trb',
-                'ast', 'stl', 'blk', 'tov', 'pts', 'fg_pct', 'fg2_pct', 'fg3_pct', 'efg_pct']
+# FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb',
+#                 'trb',
+#                 'ast', 'stl', 'blk', 'tov', 'pts', 'fg_pct', 'fg2_pct', 'fg3_pct', 'efg_pct']
+FEATURES_COL = ['fg3', 'fg3a', 'fg3_pct',
+                'trb','orb', 'drb',
+                'ast', 'blk','fg2_pct']
 path = 'data/allPlayers.csv'
 spark = SparkSession.builder.appName('Player-Classifier').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
@@ -30,24 +33,32 @@ data.printSchema()
 
 data = data.where((col('mp') / col('g') > 20) & (
         (col("yr") == 2016) | (col("yr") == 2015) | (col("yr") == 2014) | (col("yr") == 2013) | (col("yr") == 2012) | (
-        col("yr") == 2011) | (col("yr") == 2010)))
+        col("yr") == 2011) | (col("yr") == 2010))).filter(col('g') > 50)
 data = data.na.fill(0)
-
-
+# data = data.dropDuplicates(['player', 'team_id', 'yr'])
+data.show(data.count(), False)
 '''
 Normalizations part
 '''
 newFEATURES_COL = []
+
+
 def normalize(data, name):
-    min_age, max_age = data.select(min(name), max(name)).first()
     newCol = "normalized_" + name
-    newFEATURES_COL.append(newCol)
-    data = data.withColumn(newCol, ((col(name) - min_age) / (
+    # newFEATURES_COL.append(newCol)
+    data = data.withColumn(newCol, ((col(name) / col('g'))))
+
+    min_age, max_age = data.select(min(newCol), max(newCol)).first()
+    newCol2 = "normalized_" + newCol
+    newFEATURES_COL.append(newCol2)
+    data = data.withColumn(newCol2, ((col(newCol) - min_age)*100 / (
             max_age - min_age)))
     return data
+
+
 for c in FEATURES_COL:
     data = normalize(data, c)
-data.select(newFEATURES_COL).show()
+data.select(newFEATURES_COL).sort('player').show()
 '''
 Normalizations part
 '''
@@ -59,7 +70,10 @@ pca = PCA(k=3, inputCol="Features", outputCol="features")
 model = pca.fit(df_kmeans)
 df_kmeans = model.transform(df_kmeans)  # select('player', "features")
 features = df_kmeans.select('features').rdd.map(lambda x: np.array(x))
-
+for it in features.collect():
+    print(it)
+print(type(features))
+# result.show(truncate=False)
 
 cost = np.zeros(20)
 for k in range(2, 20):
@@ -76,7 +90,6 @@ plt.ioff()
 fig.show()
 plt.savefig('K_Selection.png')
 
-k = 10
 kmeans = KMeans().setK(k).setSeed(1).setFeaturesCol("features")
 model = kmeans.fit(df_kmeans)
 centers = model.clusterCenters()
