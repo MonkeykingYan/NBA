@@ -20,12 +20,12 @@ from pyspark.sql.functions import stddev, mean, min, max, col
 
 # ReadFile
 # All the features
-# FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb',
-#                 'trb',
-#                 'ast', 'stl', 'blk', 'tov', 'pts', 'fg_pct', 'fg2_pct', 'fg3_pct', 'efg_pct']
-FEATURES_COL = ['fg3', 'fg3a', 'fg3_pct',
-                'trb','orb', 'drb',
-                'ast', 'blk','fg2_pct']
+FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb',
+                'trb',
+                'ast', 'stl', 'blk', 'tov', 'pts', 'fg_pct', 'fg2_pct', 'fg3_pct', 'efg_pct']
+# FEATURES_COL = ['fg3', 'fg3a', 'fg3_pct',
+#                 'trb','orb', 'drb',
+#                 'ast', 'blk','fg2_pct']
 path = 'data/allPlayers.csv'
 spark = SparkSession.builder.appName('Player-Classifier').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
@@ -35,7 +35,6 @@ data = data.where((col('mp') / col('g') > 20) & (
         (col("yr") == 2016) | (col("yr") == 2015) | (col("yr") == 2014) | (col("yr") == 2013) | (col("yr") == 2012) | (
         col("yr") == 2011) | (col("yr") == 2010))).filter(col('g') > 50)
 data = data.na.fill(0)
-# data = data.dropDuplicates(['player', 'team_id', 'yr'])
 data.show(data.count(), False)
 '''
 Normalizations part
@@ -51,7 +50,7 @@ def normalize(data, name):
     min_age, max_age = data.select(min(newCol), max(newCol)).first()
     newCol2 = "normalized_" + newCol
     newFEATURES_COL.append(newCol2)
-    data = data.withColumn(newCol2, ((col(newCol) - min_age)*100 / (
+    data = data.withColumn(newCol2, ((col(newCol) - min_age)/ (
             max_age - min_age)))
     return data
 
@@ -90,6 +89,7 @@ plt.ioff()
 fig.show()
 plt.savefig('K_Selection.png')
 
+k = 10
 kmeans = KMeans().setK(k).setSeed(1).setFeaturesCol("features")
 model = kmeans.fit(df_kmeans)
 centers = model.clusterCenters()
@@ -98,15 +98,19 @@ print("Cluster Centers: ")
 for center in centers:
     print(center)
 
-transformed = model.transform(df_kmeans).select('player', 'features', 'prediction')
-rows = transformed.collect()
-print(rows[:3])
-print(type(transformed))
-transformed.show()
-
-df_pred = data.join(transformed, 'player')
-df_pred.printSchema()
-# print(type(df_pred["features"].fieldIndex[]))
+transformed = model.transform(df_kmeans).select('player', 'features','prediction', 'yr',  'team_id').sort('player')
+print("this is the transformaed")
+transformed.show(transformed.count(), False)
+# rows = transformed.collect()
+# print(rows[:3])
+# print(type(transformed))
+# transformed.show()
+#
+# df_pred = df_kmeans.join(transformed, 'player')
+# df_pred.printSchema()
+# # print(type(df_pred["features"].fieldIndex[]))
+# arr = df_pred.select('features').collect()
+df_pred = transformed
 arr = df_pred.select('features').collect()
 feature1 = []
 feature2 = []
@@ -115,8 +119,6 @@ for it in arr:
     feature1.append(it[0][0])
     feature2.append(it[0][1])
     feature3.append(it[0][2])
-# df_pred = df_pred.withColumn("feature1", df_pred["features"][0]).withColumn("feature2", df_pred["features"].getItem(1)).withColumn("feature3", df_pred["features"].getItem(2))
-# df_pred.show()
 ans = df_pred.select('player', 'team_id', 'yr', 'prediction').sort('player').distinct()
 ans.show(ans.count(), False)
 pddf_pred = df_pred.toPandas().set_index('player')
