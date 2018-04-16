@@ -101,20 +101,20 @@ for it in cluster:
 
 
 def setTeamLabel(teamName, year):
+    l=-1
     for label in cluster:
+        l+=1
         teams_Years = cluster[label]
         for t_y in teams_Years:
             if (t_y == (teamName, year)):
-                return str(label)
-    return '0'
+                return l
+    return 0
 
 
 udf_yan = udf(setTeamLabel)
 
-d0.show()
-d0 = d0.withColumn('Label', udf_yan(d0.Team, d0.Season))
-
-d0.show()
+d0 = d0.withColumn('Label', udf_yan(d0.Team, d0.Season)).sort('Label')
+d0.show(d0.count(), False)
 # for label, grp in cluster.items():
 #     print(label)
 #     print(grp)
