@@ -22,10 +22,10 @@ df_p.show(df_p.count(), False)
 
 # df = spark.createDataFrame(df, schema=mySchema)
 df_lineup = spark.createDataFrame(df)
-df_lineup.show()
+df_lineup.show(df_lineup.count(), False)
 
 
-def getPlayers(df, teamName, k, year):
+def getPlayers(df, teamName, k):
     players = {}
     weight = []
     i = 0
@@ -47,7 +47,7 @@ def getPlayers(df, teamName, k, year):
 
 def getTeamFeaturs(teamName, rank, year):
     matrix = []
-    (res, weight) = getPlayers(df_lineup, teamName, rank, year)
+    (res, weight) = getPlayers(df_lineup, teamName, rank)
     print(res)
     for i in res.keys():
         feature = []
@@ -56,8 +56,14 @@ def getTeamFeaturs(teamName, rank, year):
             p = p.strip()
             print('%' + p[3:len(p)] + '%')
             print('%,' + p[0] + '%')
-            f = df_p.filter(df_p.player.like('%' + p[3:len(p)] + '%')).filter(
-                df_p.player.like('%,' + p[0] + '%')).distinct()
+            # f = df_p.filter(df_p.player.like('%' + p[3:len(p)] + '%')).filter(
+            #     df_p.player.like('%,' + p[0] + '%')).filter(
+            #     (df_p.yr == year)).distinct()
+            if(teamName != 'PHI'):
+                f = df_p.filter((df_p.yr == year)).filter(df_p.player.like('%' + p[3:len(p)] + '%')).filter(
+                    df_p.player.like('%,' + p[0] + '%'))
+            else:
+                f = df_p.filter((df_p.yr == year)).filter(df_p.player.like('%' + p[3:len(p)] + '%'))
             feac = f.select('prediction').collect()
             if (len(feac) != 0):
                 feature.append(feac[0][0])
@@ -105,12 +111,12 @@ AllTeams = ['OKC', 'GSW', 'SAS', 'CLE', 'LAC',
 #     print(i)
 AllYears = [2011, 2012, 2013, 2014, 2015, 2016]
 for year in AllYears:
+    TeamDic = {}
     ans = {}
     for team in AllTeams:
         # print(team)
         ans[team] = getTeamFeaturs(team, 2, year)
 
-    TeamDic = {}
     for a in ans:
         A = list(chain.from_iterable(ans[a]))
         TeamDic[a] = A

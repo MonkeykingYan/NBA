@@ -28,7 +28,7 @@ spark = SparkSession.builder.appName('Player-Classifier').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
 
-data = data.where((col('mp') / col('g') > 20) & (
+data = data.where((col('mp') / col('g') > 15) & (
         (col("yr") == 2016) | (col("yr") == 2015) | (col("yr") == 2014) | (col("yr") == 2013) | (col("yr") == 2012) | (
         col("yr") == 2011) | (col("yr") == 2010))).filter(col('g') > 50)
 data = data.na.fill(0)
