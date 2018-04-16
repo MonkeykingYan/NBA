@@ -1,10 +1,12 @@
-
 from nltk.metrics import distance
 import Pycluster as PC
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 from pyspark.ml.fpm import FPGrowth
 import ast
+import numpy as np
+import matplotlib.pyplot as plt
+import math
 
 path = 'teamClusters.csv'
 paths = ['teamClusters2011.csv', 'teamClusters2012.csv', 'teamClusters2013.csv', 'teamClusters2014.csv',
@@ -40,7 +42,8 @@ AllTeams = ['OKC', 'GSW', 'SAS', 'CLE', 'LAC',
             'DAL', 'BOS', 'HOU', 'IND', 'UTA',
             'WAS', 'MEM', 'MIA', 'PHI', 'NYK',
             'NOP', 'LAL', 'BRK', 'ORL', 'SAC',
-            'MIL', 'PHO', 'CHI', 'MIN', 'DEN']
+            'MIL', 'PHO', 'CHI', 'MIN', 'DEN',
+            'NOH', 'NJN', 'CHA']
 
 AllYears = [2011, 2012, 2013, 2014, 2015, 2016]
 words = []
@@ -53,8 +56,12 @@ TeamDic = {}
 for year in AllYears:
     for team in AllTeams:
         lis = d0.where(col("Team") == team).where(col('Season') == year).select('Features').collect()
-        TeamDic[(team, year)] = lis[0][0]
-        words.append(lis[0][0])
+        print(team)
+        if(len(lis)!=0):
+            TeamDic[(team, year)] = lis[0][0]
+            words.append(lis[0][0])
+        else:
+            continue
 
 # print(TeamDic)
 for item in TeamDic:
@@ -65,6 +72,22 @@ for item in TeamDic:
 dist = [distance.edit_distance(words[i], words[j])
     for i in range(1, len(words))
     for j in range(0, i)]
+
+
+
+cost = np.zeros(20)
+for k in range(1, 20):
+    labels, error, nfound = PC.kmedoids(dist, nclusters=k)
+    cost[k] = error+(k-5)*(200/k)
+
+plt.interactive(True)
+fig, ax = plt.subplots(1, 1, figsize=(8, 6))
+ax.plot(range(2, 20), cost[2:20])
+ax.set_xlabel('k')
+ax.set_ylabel('cost')
+plt.ioff()
+fig.show()
+plt.savefig('K_Selection_forTeams.png')
 
 labels, error, nfound = PC.kmedoids(dist, nclusters=5)  # kmedoids(dist, nclusters=3)
 cluster = dict()
