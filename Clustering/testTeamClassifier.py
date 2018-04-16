@@ -115,6 +115,7 @@ udf_yan = udf(setTeamLabel)
 
 d0 = d0.withColumn('Label', udf_yan(d0.Team, d0.Season)).sort('Label')
 d0.show(d0.count(), False)
+d0.toPandas().to_csv('teamClusters.csv')
 # for label, grp in cluster.items():
 #     print(label)
 #     print(grp)
