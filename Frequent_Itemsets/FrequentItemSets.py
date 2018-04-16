@@ -17,7 +17,7 @@ import ast
 # data.printSchema()
 # data.show()
 
-path = 'teamClusters.csv'
+path = '../Clustering/teamClusters.csv'
 
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 

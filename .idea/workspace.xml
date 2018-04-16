@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9dbbd4-f71e-4d78-b700-132564052b40" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Clustering/FrequentItemSets.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/FrequentItemSets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/K_Selection_forTeams.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/K_Selection_forTeams.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/teamClusters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/testTeamClassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/testTeamClassifier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frequent_Itemsets/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/FrequentItemSets.py" beforeDir="false" afterPath="$PROJECT_DIR$/Frequent_Itemsets/FrequentItemSets.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,10 +57,10 @@
         </entry>
       </file>
       <file leaf-file-name="FrequentItemSets.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Clustering/FrequentItemSets.py">
+        <entry file="file://$PROJECT_DIR$/Frequent_Itemsets/FrequentItemSets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-113">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="211">
+              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -145,6 +143,7 @@
         <option value="$PROJECT_DIR$/Clustering/LineUp.py" />
         <option value="$PROJECT_DIR$/Clustering/testTeamClassifier.py" />
         <option value="$PROJECT_DIR$/Clustering/FrequentItemSets.py" />
+        <option value="$PROJECT_DIR$/Frequent_Itemsets/FrequentItemSets.py" />
       </list>
     </option>
   </component>
@@ -170,12 +169,7 @@
             <path>
               <item name="NBA" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project_BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Clustering" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project_BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="Frequent_Itemsets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NBA" type="b2602c69:ProjectViewProjectNode" />
@@ -200,6 +194,7 @@
       <recent name="$PROJECT_DIR$/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Frequent_Itemsets" />
       <recent name="$PROJECT_DIR$/Clustering" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/PageRank" />
@@ -231,7 +226,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Clustering/FrequentItemSets.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Frequent_Itemsets/FrequentItemSets.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -750,10 +745,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/FrequentItemSets.py">
+    <entry file="file://$PROJECT_DIR$/Frequent_Itemsets/FrequentItemSets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="211">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
