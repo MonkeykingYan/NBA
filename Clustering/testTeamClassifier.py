@@ -8,7 +8,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pyspark.sql.functions import udf
 
-
 path = 'teamClusters.csv'
 paths = ['teamClusters2011.csv', 'teamClusters2012.csv', 'teamClusters2013.csv', 'teamClusters2014.csv',
          'teamClusters2015.csv', 'teamClusters2016.csv']
@@ -32,7 +31,7 @@ d0 = allDataFrames[0]
 for index in range(1, len(allDataFrames)):
     d0 = d0.union(allDataFrames[index])
 d0.show(d0.count(), False)
-
+d0.printSchema()
 
 #
 # ans = d0.toPandas()
@@ -58,7 +57,7 @@ for year in AllYears:
     for team in AllTeams:
         lis = d0.where(col("Team") == team).where(col('Season') == year).select('Features').collect()
         print(team)
-        if(len(lis)!=0):
+        if (len(lis) != 0):
             TeamDic[(team, year)] = lis[0][0]
             words.append(lis[0][0])
         else:
@@ -71,10 +70,8 @@ for item in TeamDic:
 #          'baker', 'bismark', 'park', 'stake', 'steak', 'teak', 'sleek']
 
 dist = [distance.edit_distance(words[i], words[j])
-    for i in range(1, len(words))
-    for j in range(0, i)]
-
-
+        for i in range(1, len(words))
+        for j in range(0, i)]
 
 cost = np.zeros(20)
 for k in range(1, 20):
@@ -95,13 +92,29 @@ cluster = dict()
 
 for word, label in zip(words, labels):
     for item in TeamDic:
-        if(TeamDic[item] == word):
+        if (TeamDic[item] == word):
             cluster.setdefault(label, []).append(item)
         # cluster.setdefault(label, []).append(word)
 for it in cluster:
     print(it)
     print(set(cluster[it]))
-df = spark.withColumn('label', lit(int(season[:4])))
+
+
+def setTeamLabel(teamName, year):
+    for label in cluster:
+        teams_Years = cluster[label]
+        for t_y in teams_Years:
+            if (t_y == (teamName, year)):
+                return str(label)
+    return '0'
+
+
+udf_yan = udf(setTeamLabel)
+
+d0.show()
+d0 = d0.withColumn('Label', udf_yan(d0.Team, d0.Season))
+
+d0.show()
 # for label, grp in cluster.items():
 #     print(label)
 #     print(grp)
