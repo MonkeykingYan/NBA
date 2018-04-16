@@ -130,4 +130,4 @@ for year in AllYears:
 
     df = spark.createDataFrame(constructor, ["Team", "Features"]).withColumn('Season', lit(year))
     df.show()
-    # df.toPandas().to_csv('teamClusters{}.csv'.format(year))
+    df.toPandas().to_csv('teamClusters{}.csv'.format(year))
