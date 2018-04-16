@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9dbbd4-f71e-4d78-b700-132564052b40" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/LineUp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/LineUp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2011.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2011.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2012.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2012.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2013.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2013.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2014.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2014.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2015.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2015.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering/teamClusters2016.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters2016.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/K_Selection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/K_Selection_forTeams.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Clustering/testTeamClassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/testTeamClassifier.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +21,8 @@
       <file leaf-file-name="LineUp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="163" column="13" lean-forward="true" selection-start-line="163" selection-start-column="13" selection-end-line="163" selection-end-column="13" />
+            <state relative-caret-position="346">
+              <caret line="160" column="41" lean-forward="true" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -39,22 +33,19 @@
       <file leaf-file-name="testTeamClassifier.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Clustering/testTeamClassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#1#34#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="K_Selection_forTeams.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Clustering/K_Selection_forTeams.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="K_Selection.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Clustering/K_Selection.png">
-          <provider selected="true" editor-type-id="images" />
+      <file leaf-file-name="playerCluster.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2527">
+              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="31" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -68,7 +59,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>JR</find>
       <find>lebron</find>
       <find>Smith</find>
       <find>lebr</find>
@@ -95,9 +85,10 @@
       <find>MIA</find>
       <find>GSW</find>
       <find>CLE</find>
-      <find>CHO</find>
-      <find>cle</find>
+      <find>gsw</find>
       <find>TOR</find>
+      <find>cle</find>
+      <find>CHO</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,6 +118,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-26" />
     <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="1058" />
@@ -172,14 +164,15 @@
     <property name="settings.editor.splitter.proportion" value="0.23495145" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Clustering" />
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Clustering" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/PageRank" />
       <recent name="$PROJECT_DIR$/passingNetwork" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -467,16 +460,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1058" extended-state="0" />
+    <frame x="-26" y="22" width="1920" height="1058" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.15376514" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.15376514" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013165" side_tool="true" weight="0.32910052" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49815693" weight="0.30232558" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49921012" weight="0.32910052" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5018431" side_tool="true" visible="true" weight="0.26031747" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5018431" side_tool="true" visible="true" weight="0.2899471" />
       <window_info id="Structure" order="1" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49763033" weight="0.32804233" />
       <window_info id="Favorites" order="2" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
@@ -658,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/TeamClusters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/teamClusters2012.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -684,13 +670,6 @@
     <entry file="file://$PROJECT_DIR$/Clustering/teamClusters2014.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1336">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/teamClusters2011.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -698,13 +677,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
+    <entry file="file://$PROJECT_DIR$/Clustering/TeamClusters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="163" column="13" lean-forward="true" selection-start-line="163" selection-start-column="13" selection-end-line="163" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -714,12 +690,27 @@
     <entry file="file://$PROJECT_DIR$/Clustering/K_Selection_forTeams.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2527">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="160" column="41" lean-forward="true" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/testTeamClassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1#34#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

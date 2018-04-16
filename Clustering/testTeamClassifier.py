@@ -6,7 +6,8 @@ from pyspark.ml.fpm import FPGrowth
 import ast
 import numpy as np
 import matplotlib.pyplot as plt
-import math
+from pyspark.sql.functions import udf
+
 
 path = 'teamClusters.csv'
 paths = ['teamClusters2011.csv', 'teamClusters2012.csv', 'teamClusters2013.csv', 'teamClusters2014.csv',
@@ -78,18 +79,18 @@ dist = [distance.edit_distance(words[i], words[j])
 cost = np.zeros(20)
 for k in range(1, 20):
     labels, error, nfound = PC.kmedoids(dist, nclusters=k)
-    cost[k] = error+(k-5)*(200/k)
+    cost[k] = error
 
 plt.interactive(True)
 fig, ax = plt.subplots(1, 1, figsize=(8, 6))
-ax.plot(range(2, 20), cost[2:20])
+ax.plot(range(1, 20), cost[1:20])
 ax.set_xlabel('k')
 ax.set_ylabel('cost')
 plt.ioff()
 fig.show()
 plt.savefig('K_Selection_forTeams.png')
 
-labels, error, nfound = PC.kmedoids(dist, nclusters=5)  # kmedoids(dist, nclusters=3)
+labels, error, nfound = PC.kmedoids(dist, nclusters=10)  # kmedoids(dist, nclusters=3)
 cluster = dict()
 
 for word, label in zip(words, labels):
@@ -100,7 +101,7 @@ for word, label in zip(words, labels):
 for it in cluster:
     print(it)
     print(set(cluster[it]))
-
+df = spark.withColumn('label', lit(int(season[:4])))
 # for label, grp in cluster.items():
 #     print(label)
 #     print(grp)
