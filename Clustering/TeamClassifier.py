@@ -87,7 +87,7 @@ plt.ioff()
 fig.show()
 plt.savefig('K_Selection_forTeams.png')
 
-labels, error, nfound = PC.kmedoids(dist, nclusters=10)  # kmedoids(dist, nclusters=3)
+labels, error, nfound = PC.kmedoids(dist, nclusters=5)  # kmedoids(dist, nclusters=3)
 cluster = dict()
 
 for word, label in zip(words, labels):

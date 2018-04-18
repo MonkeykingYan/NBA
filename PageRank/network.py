@@ -1,3 +1,4 @@
+
 import json
 from pprint import pprint
 import pandas as pd
@@ -14,14 +15,41 @@ conf.setAppName('PassingNetwork')
 sc = SparkContext(conf=conf)
 
 os.chdir("/Users/mayan/Desktop/BigData/data")
-os.environ["PYSPARK_SUBMIT_ARGS"] = (
-    "--packages graphframes:graphframes:0.3.0-spark2.0-s_2.11"
-)
+# os.environ["PYSPARK_SUBMIT_ARGS"] = (
+#     "--packages graphframes:graphframes:0.3.0-spark2.0-s_2.11 pyspark-shell"
+# )
+
+from graphframes import *
 
 spark = SparkSession.builder.getOrCreate()
 raw = pd.DataFrame()
 playerids = [2738, 202691, 101106, 2760, 2571, 203949, 203546,
              203110, 201939, 203105, 2733, 1626172, 203084]
+# Calling API and store the results as JSON
+
+
+for playerid in playerids:
+    os.system('curl "http://stats.nba.com/stats/playerdashptpass?'
+        'DateFrom=&'
+        'DateTo=&'
+        'GameSegment=&'
+        'LastNGames=0&'
+        'LeagueID=00&'
+        'Location=&'
+        'Month=0&'
+        'OpponentTeamID=0&'
+        'Outcome=&'
+        'PerMode=Totals&'
+        'Period=0&'
+        'PlayerID={playerid}&'
+        'Season=2015-16&'
+        'SeasonSegment=&'
+        'SeasonType=Regular+Season&'
+        'TeamID=0&'
+        'VsConference=&'
+        'VsDivision=" > {playerid}.json'.format(playerid=playerid))
+
+
 for player in playerids:
     with open(str(player) + '.json') as json_data:
         d = json.load(json_data)['resultSets'][0]
@@ -64,7 +92,7 @@ edges = sqlContext.createDataFrame(pandas_edges)
 print(type(vertices))
 print(type(edges))
 
-from graphframes import *
+
 
 g = GraphFrame(vertices, edges)
 print("vertices")

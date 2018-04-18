@@ -17,7 +17,7 @@ import ast
 # data.printSchema()
 # data.show()
 
-path = 'teamClusters.csv'
+path = '../Clustering/teamClusters.csv'
 
 spark = SparkSession.builder.appName('NBA-Analysis').getOrCreate()
 
@@ -30,19 +30,19 @@ data = data.map(lambda x: (x[0], x[1], x[2], x[3], list(set(x[2])), x[5]))
 data = spark.createDataFrame(data, ["ID", "Team", "Features", 'Season', 'Items', 'label'])
 data.show(data.count(), False)
 
-d0 = data.where(col("label") == 1).select("Team", 'Season','Items', 'label')
+d0 = data.where(col("label") == 3).select("Team", 'Season','Items', 'label')
 
-fpGrowth = FPGrowth(itemsCol="Items", minSupport=0.5, minConfidence=0.5)
+fpGrowth = FPGrowth(itemsCol="Items", minSupport=0.5, minConfidence=0.6)
 model = fpGrowth.fit(d0)
 
 # Display frequent itemsets.
-model.freqItemsets.show(8)
+model.freqItemsets.sort('freq', ascending=False).show()
 
 # Display generated association rules.
-model.associationRules.show(8)
+model.associationRules.sort('confidence', ascending=False).show()
 
 # transform examines the input items against all the association rules and summarize the
 # consequents as prediction
-model.transform(d0).show(8)
+# model.transform(d0).show()
 
 
