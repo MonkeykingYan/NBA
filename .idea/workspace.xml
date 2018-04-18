@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9dbbd4-f71e-4d78-b700-132564052b40" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/101106.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/1626172.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/201575.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/201578.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/201939.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/202691.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/203084.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/203105.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/203110.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/203546.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/203949.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/2571.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/2733.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/2738.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PageRank/GSW2016/2760.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/K_Selection_forTeams.png" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/K_Selection_forTeams.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/TeamClassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/TeamClassifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clustering/teamClusters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering/teamClusters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageRank/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageRank/network.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,23 +35,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TeamClassifier.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Clustering/TeamClassifier.py">
+      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PageRank/network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-28">
+              <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrequentItemSets.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FrequentSets/FrequentItemSets.py">
+      <file leaf-file-name="2571.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/2571.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="2733.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/2733.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="2738.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/2738.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="201939.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/201939.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="2571.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PageRank/GSW2016/2571.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state>
+              <caret column="61" selection-start-column="61" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -48,7 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Smith</find>
       <find>lebr</find>
       <find>FPG</find>
       <find>Chris</find>
@@ -78,6 +113,7 @@
       <find>cle</find>
       <find>58</find>
       <find>CHO</find>
+      <find>ATL</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -105,16 +141,17 @@
         <option value="$PROJECT_DIR$/Clustering/FrequentItemSets.py" />
         <option value="$PROJECT_DIR$/Frequent_Itemsets/FrequentItemSets.py" />
         <option value="$PROJECT_DIR$/Test/testNBAAPI.py" />
-        <option value="$PROJECT_DIR$/Clustering/TeamClassifier.py" />
         <option value="$PROJECT_DIR$/FrequentSets/FrequentItemSets.py" />
+        <option value="$PROJECT_DIR$/Clustering/TeamClassifier.py" />
+        <option value="$PROJECT_DIR$/PageRank/network.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1920" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
     <option name="y" value="22" />
-    <option name="width" value="971" />
-    <option name="height" value="1258" />
+    <option name="width" value="1920" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -133,27 +170,12 @@
             <path>
               <item name="NBA" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project_BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="Clustering" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project_BigData" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NBA" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project_BigData" type="462c0819:PsiDirectoryNode" />
               <item name="FrequentSets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project_BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="PageRank" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NBA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project_BigData" type="462c0819:PsiDirectoryNode" />
-              <item name="passingNetwork" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NBA" type="b2602c69:ProjectViewProjectNode" />
@@ -172,16 +194,17 @@
     <property name="settings.editor.splitter.proportion" value="0.22564612" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Clustering" />
-      <recent name="$PROJECT_DIR$/data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/FrequentSets" />
       <recent name="$PROJECT_DIR$/Frequent_Itemsets" />
       <recent name="$PROJECT_DIR$/Clustering" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/PageRank" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PageRank" />
+      <recent name="$PROJECT_DIR$/Clustering" />
+      <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -196,7 +219,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.FrequentItemSets (1)">
+  <component name="RunManager" selected="Python.network">
     <configuration name="FrequentItemSets (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NBA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -287,6 +310,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="network" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="NBA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PYSPARK_SUBMIT_ARGS" value="--packages graphframes:graphframes:0.3.0-spark2.0-s_2.11 pyspark-shell" />
+      </envs>
+      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PageRank" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PageRank/network.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="testNBAAPI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NBA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -300,24 +342,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/testNBAAPI.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="testTeamClassifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="NBA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clustering" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Clustering/testTeamClassifier.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -431,18 +455,18 @@
     <list>
       <item itemvalue="Python.LineUp" />
       <item itemvalue="Python.FrequentItemSets" />
-      <item itemvalue="Python.testTeamClassifier" />
       <item itemvalue="Python.TeamClassifier" />
       <item itemvalue="Python.FrequentItemSets (1)" />
       <item itemvalue="Python.testNBAAPI" />
+      <item itemvalue="Python.network" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.FrequentItemSets (1)" />
-        <item itemvalue="Python.TeamClassifier" />
+        <item itemvalue="Python.network" />
         <item itemvalue="Python.testNBAAPI" />
+        <item itemvalue="Python.TeamClassifier" />
+        <item itemvalue="Python.FrequentItemSets (1)" />
         <item itemvalue="Python.FrequentItemSets" />
-        <item itemvalue="Python.testTeamClassifier" />
       </list>
     </recent_temporary>
   </component>
@@ -469,13 +493,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="22" width="971" height="1258" extended-state="6" />
+    <frame x="1" y="22" width="1920" height="1058" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" weight="0.23684211" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.14639284" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.10110585" weight="0.32910052" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013165" side_tool="true" weight="0.32910052" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49763033" weight="0.3015873" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.89889413" side_tool="true" visible="true" weight="0.4349345" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.89889413" side_tool="true" visible="true" weight="0.23174603" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49921012" weight="0.32910052" />
       <window_info id="Structure" order="1" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
@@ -531,7 +555,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/17_18_advanced.csv" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/py4j/java_gateway.py" />
     <entry file="file://$PROJECT_DIR$/data/3years.csv" />
     <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/pyspark/rdd.py" />
@@ -553,13 +576,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/pyspark/rdd.py" />
-    <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6784">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyspark/sql/session.py" />
     <entry file="file://$PROJECT_DIR$/Clustering/teamClusters2016.csv">
       <provider selected="true" editor-type-id="text-editor">
@@ -581,13 +597,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frequent_Itemsets/FrequentItemSets.py" />
-    <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/LineUp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -599,13 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/TeamClusters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3304">
-          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
@@ -630,29 +632,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PageRank/network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="30" selection-start-line="30" selection-end-line="49" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/2738.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/2733.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/2571.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/1626172.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/101106.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/201939.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/202691.json">
@@ -673,16 +656,6 @@
     <entry file="file://$PROJECT_DIR$/Test/203949.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/testNBAAPI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="17" column="74" lean-forward="true" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/teamClusters.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -690,23 +663,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/TeamClusters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/playerCluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2831">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/K_Selection_forTeams.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/playersClusters.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8160">
+          <caret line="272" column="26" lean-forward="true" selection-start-line="272" selection-start-column="26" selection-end-line="272" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrequentSets/FrequentItemSets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/testNBAAPI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-736">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/TeamClassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+        <state relative-caret-position="2490">
+          <caret line="83" column="18" lean-forward="true" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrequentSets/FrequentItemSets.py">
+    <entry file="file://$PROJECT_DIR$/PageRank/network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="-28">
+          <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/2571.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/2733.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/2738.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/201939.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageRank/GSW2016/2571.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="61" selection-start-column="61" selection-end-column="61" />
         </state>
       </provider>
     </entry>

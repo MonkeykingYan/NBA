@@ -14,7 +14,7 @@ conf.setMaster('local')
 conf.setAppName('PassingNetwork')
 sc = SparkContext(conf=conf)
 
-os.chdir("/Users/mayan/Desktop/BigData/data")
+os.chdir("../PageRank/GSW2016")
 # os.environ["PYSPARK_SUBMIT_ARGS"] = (
 #     "--packages graphframes:graphframes:0.3.0-spark2.0-s_2.11 pyspark-shell"
 # )
@@ -28,26 +28,26 @@ playerids = [2738, 202691, 101106, 2760, 2571, 203949, 203546,
 # Calling API and store the results as JSON
 
 
-for playerid in playerids:
-    os.system('curl "http://stats.nba.com/stats/playerdashptpass?'
-        'DateFrom=&'
-        'DateTo=&'
-        'GameSegment=&'
-        'LastNGames=0&'
-        'LeagueID=00&'
-        'Location=&'
-        'Month=0&'
-        'OpponentTeamID=0&'
-        'Outcome=&'
-        'PerMode=Totals&'
-        'Period=0&'
-        'PlayerID={playerid}&'
-        'Season=2015-16&'
-        'SeasonSegment=&'
-        'SeasonType=Regular+Season&'
-        'TeamID=0&'
-        'VsConference=&'
-        'VsDivision=" > {playerid}.json'.format(playerid=playerid))
+# for playerid in playerids:
+#     os.system('curl "http://stats.nba.com/stats/playerdashptpass?'
+#         'DateFrom=&'
+#         'DateTo=&'
+#         'GameSegment=&'
+#         'LastNGames=0&'
+#         'LeagueID=00&'
+#         'Location=&'
+#         'Month=0&'
+#         'OpponentTeamID=0&'
+#         'Outcome=&'
+#         'PerMode=Totals&'
+#         'Period=0&'
+#         'PlayerID={playerid}&'
+#         'Season=2015-16&'
+#         'SeasonSegment=&'
+#         'SeasonType=Regular+Season&'
+#         'TeamID=0&'
+#         'VsConference=&'
+#         'VsDivision=" > {playerid}.json'.format(playerid=playerid))
 
 
 for player in playerids:

@@ -73,14 +73,14 @@ dist = [distance.edit_distance(words[i], words[j])
         for i in range(1, len(words))
         for j in range(0, i)]
 
-cost = np.zeros(20)
-for k in range(1, 20):
+cost = np.zeros(15)
+for k in range(1, 15):
     labels, error, nfound = PC.kmedoids(dist, nclusters=k)
-    cost[k] = error
+    cost[k] = error + (k - 5) * 25
 
 plt.interactive(True)
 fig, ax = plt.subplots(1, 1, figsize=(8, 6))
-ax.plot(range(1, 20), cost[1:20])
+ax.plot(range(1, 15), cost[1:15])
 ax.set_xlabel('k')
 ax.set_ylabel('cost')
 plt.ioff()
@@ -101,9 +101,9 @@ for it in cluster:
 
 
 def setTeamLabel(teamName, year):
-    l=-1
+    l = -1
     for label in cluster:
-        l+=1
+        l += 1
         teams_Years = cluster[label]
         for t_y in teams_Years:
             if (t_y == (teamName, year)):
@@ -114,7 +114,7 @@ def setTeamLabel(teamName, year):
 udf_yan = udf(setTeamLabel)
 
 d0 = d0.withColumn('Label', udf_yan(d0.Team, d0.Season)).sort('Label')
-d0 = d0.select('Team', 'Features','Season','Items','Label')
+d0 = d0.select('Team', 'Features', 'Season', 'Items', 'Label')
 d0.show(d0.count(), False)
 d0.toPandas().to_csv('teamClusters.csv')
 # for label, grp in cluster.items():
