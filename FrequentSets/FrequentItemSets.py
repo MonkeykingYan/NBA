@@ -30,7 +30,7 @@ data = data.map(lambda x: (x[0], x[1], x[2], x[3], list(set(x[2])), x[5]))
 data = spark.createDataFrame(data, ["ID", "Team", "Features", 'Season', 'Items', 'label'])
 data.show(data.count(), False)
 
-d0 = data.where(col("label") == 3).select("Team", 'Season','Items', 'label')
+d0 = data.where(col("label") == 4).select("Team", 'Season','Items', 'label')
 
 fpGrowth = FPGrowth(itemsCol="Items", minSupport=0.5, minConfidence=0.6)
 model = fpGrowth.fit(d0)
