@@ -21,9 +21,13 @@ from graphframes import *
 
 spark = SparkSession.builder.getOrCreate()
 raw = pd.DataFrame()
+
+# GSW
 # playerids = [2738, 202691, 101106, 2760, 2571, 203949, 203546,
 #              203110, 201939, 203105, 2733, 1626172, 203084]
-playerids = [2544, 2548, 201596, 202708]
+
+# MIA
+playerids = [951, 1740, 2203, 2365, 2544, 2547, 2548, 2617, 201202, 201563, 201596, 201962, 202708]
 # Calling API and store the results as JSON
 
 
