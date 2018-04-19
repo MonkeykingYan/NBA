@@ -1,4 +1,3 @@
-
 import json
 from pprint import pprint
 import pandas as pd
@@ -8,13 +7,12 @@ from pyspark.sql import SQLContext
 from pyspark import SparkConf, SparkContext
 from pyspark import sql
 
-
 conf = SparkConf()
 conf.setMaster('local')
 conf.setAppName('PassingNetwork')
 sc = SparkContext(conf=conf)
 
-os.chdir("../PageRank/GSW2016")
+os.chdir("../PageRank/MIA2013")
 # os.environ["PYSPARK_SUBMIT_ARGS"] = (
 #     "--packages graphframes:graphframes:0.3.0-spark2.0-s_2.11 pyspark-shell"
 # )
@@ -23,8 +21,9 @@ from graphframes import *
 
 spark = SparkSession.builder.getOrCreate()
 raw = pd.DataFrame()
-playerids = [2738, 202691, 101106, 2760, 2571, 203949, 203546,
-             203110, 201939, 203105, 2733, 1626172, 203084]
+# playerids = [2738, 202691, 101106, 2760, 2571, 203949, 203546,
+#              203110, 201939, 203105, 2733, 1626172, 203084]
+playerids = [2544, 2548, 201596, 202708]
 # Calling API and store the results as JSON
 
 
@@ -91,8 +90,6 @@ edges = sqlContext.createDataFrame(pandas_edges)
 # Analysis part
 print(type(vertices))
 print(type(edges))
-
-
 
 g = GraphFrame(vertices, edges)
 print("vertices")
