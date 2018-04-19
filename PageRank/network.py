@@ -6,6 +6,8 @@ from pyspark.sql import SparkSession
 from pyspark.sql import SQLContext
 from pyspark import SparkConf, SparkContext
 from pyspark import sql
+from pyspark.sql.functions import col
+from pyspark.sql.functions import udf
 
 conf = SparkConf()
 conf.setMaster('local')
@@ -110,7 +112,28 @@ print("labelPropagation")
 g.labelPropagation(maxIter=5).show()
 g.labelPropagation(maxIter=5).toPandas().to_csv("groups.csv", index=False)
 print("pageRank")
+d0 = g.pageRank(resetProbability=0.15, tol=0.01).vertices.sort(
+    'pagerank', ascending=False)
 g.pageRank(resetProbability=0.15, tol=0.01).vertices.sort(
     'pagerank', ascending=False).show()
 g.pageRank(resetProbability=0.15, tol=0.01).vertices.toPandas().to_csv(
     "size.csv", index=False)
+
+df_players = pd.read_csv('/Users/mayan/Desktop/BigData/project/Project_BigData/Clustering/playersClusters.csv')
+# df_p = spark.createDataFrame(df_players, schema=playersSchema)
+df_p = spark.createDataFrame(df_players)
+df_p.show()
+label = df_p.where(col("player") == 'Allen,Ray').select('prediction').distinct().collect()
+print(label[0][0])
+def setPlayerLabel(playerName):
+    pn = playerName.strip()
+    print(pn)
+    label = df_p.where(col("player")==pn).select('prediction').distinct().collect()
+    if (len(label) == 0):
+        return -1
+    return label[0][0]
+
+
+udf_yan = udf(setPlayerLabel)
+
+d0 = d0.withColumn('player Label', udf_yan(d0['name'])).show()
