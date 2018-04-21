@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9a9dbbd4-f71e-4d78-b700-132564052b40" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageRank/MIA2013/groups.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PageRank/MIA2013/groups.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageRank/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageRank/network.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,10 +16,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TeamClassifier.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TeamClassifier.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Clustering/TeamClassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="-390">
               <caret line="87" column="39" lean-forward="true" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
@@ -30,10 +28,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teamClusters.csv" pinned="false" current-in-tab="false">
+      <file leaf-file-name="teamClusters.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Clustering/teamClusters.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="-4360">
               <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
             </state>
           </provider>
@@ -113,7 +111,7 @@
       <find>Mo</find>
       <find>|OKC</find>
       <find>MI</find>
-      <find />
+      <find>T. Young</find>
       <find>Yo</find>
       <find>phi</find>
       <find>Lou</find>
@@ -121,10 +119,9 @@
       <find>Williams</find>
       <find>PHI</find>
       <find>Young</find>
-      <find />
+      <find>|PHI    |2011</find>
       <find>Turner</find>
       <find>A</find>
-      <find>MIA</find>
       <find>GSW</find>
       <find>CLE</find>
       <find>gsw</find>
@@ -134,6 +131,7 @@
       <find>CHO</find>
       <find>ATL</find>
       <find>lebron</find>
+      <find>MIA</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,10 +166,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="2035" />
-    <option name="y" value="105" />
-    <option name="width" value="968" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1920" />
+    <option name="y" value="22" />
+    <option name="width" value="973" />
     <option name="height" value="1258" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -526,14 +524,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2035" y="105" width="968" height="1258" extended-state="0" />
-    <editor active="true" />
+    <frame x="1920" y="22" width="973" height="1258" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.27349526" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.2720588" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.10110585" weight="0.32910052" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013165" side_tool="true" weight="0.32910052" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49763033" weight="0.3015873" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.73828334" side_tool="true" visible="true" weight="0.460262" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.73828334" side_tool="true" visible="true" weight="0.40262008" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49921012" weight="0.32861477" />
       <window_info id="Structure" order="1" sideWeight="0.5060606" side_tool="true" weight="0.14007372" />
@@ -777,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Clustering/teamClusters.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PageRank/GSW2016/passes.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -805,11 +795,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Clustering/TeamClassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
+        <state relative-caret-position="-390">
           <caret line="87" column="39" lean-forward="true" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clustering/teamClusters.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4360">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
         </state>
       </provider>
     </entry>
