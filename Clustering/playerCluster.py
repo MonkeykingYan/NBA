@@ -23,7 +23,7 @@ from pyspark.sql.functions import stddev, mean, min, max, col
 FEATURES_COL = ['fg', 'fga', 'fg3', 'fg3a', 'fg2', 'fg2a', 'ft', 'fta', 'orb', 'drb', 'trb',
                 'ast', 'stl', 'blk', 'tov', 'pts', 'fg_pct', 'fg2_pct', 'fg3_pct', 'efg_pct']
 
-path = 'data/allPlayers.csv'
+path = '../data/allPlayers.csv'
 spark = SparkSession.builder.appName('Player-Classifier').getOrCreate()
 data = spark.read.csv(path, header=True, inferSchema=True)
 data.printSchema()
@@ -147,4 +147,4 @@ plt.ioff()
 plt.show()
 plt.savefig('KMeans.png')
 ans = ans.toPandas().set_index('player')
-ans.to_csv('Clustering/playersClusters.csv', sep=',')
+ans.to_csv('../Clustering/playersClusters.csv', sep=',')
